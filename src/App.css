@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background: var(--dark-blue) url("./assets/img/background-img.svg") repeat fixed;
+    background-size: 75rem;
+    font-family: 'Montserrat', sans-serif;
+
+    width:100vw;
+    height:100vh;
+}
