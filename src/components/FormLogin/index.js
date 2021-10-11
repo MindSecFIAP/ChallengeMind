@@ -1,14 +1,25 @@
 import React, {useState} from 'react'
 import Logo from "../../assets/img/Mind.svg"
-import {Container,
-        FormWrapper,
-        FormContent,
-        FormLabel,
-        FormInput,
-        ButtonContainer,
-        Button,
-        ImgLogo,
-        ModalWrapper} from './FormLoginElements'
+import Escolha from "../../assets/img/avatar/escolha.svg";
+import EscolhaDark from "../../assets/img/avatar/escolhaDark.svg";
+import {Modal} from '../Modal'
+import {
+  Container,
+  FormWrapper,
+  FormContent,
+  FormLabel,
+  FormInput,
+  ButtonContainer,
+  Button,
+  ImgLogo,
+} from './FormLoginElements'
+
+import{
+  ModalWrapper,
+  ModalH2,
+  ModalImg,
+  ModalButton,
+} from '../Modal/ModalElements'
 
 const FormLogin = () => {
     const [buttonPopup, setButtonPopup] = useState(false);
@@ -25,16 +36,40 @@ const FormLogin = () => {
                     <FormInput id='password' type='password' name="password" required/>
 
                     <ButtonContainer> 
-                        <Button className="btn" href="#" onClick={() => setButtonPopup(true)}>
+                        <Button href="#" onClick={() => setButtonPopup(true)}>
                         Cadastrar
                         </Button>
 
-                        <Button type="button" className="btn" onclick="check(this.form)" value="Login">
+                        <Button type="button" onclick="check(this.form)" value="Login">
                         Login
                         </Button>
                     </ButtonContainer>
                 </FormContent>
             </FormWrapper>
+
+              <Modal trigger={buttonPopup} setTrigger={() => setButtonPopup(false)}>
+                  <ModalH2>Escolha o tipo de usuário</ModalH2>
+                  <ModalImg src={Escolha} alt="Avatar" />
+              
+                    <ModalButton onClick={() => setButtonPopupVoluntary(true)}>
+                      Voluntário
+                    </ModalButton>
+                    <ModalButton href="./RegisterUser" id="btnUser">
+                      Usuário
+                    </ModalButton>
+              </Modal>
+
+              <Modal trigger={buttonPopupVoluntary} setTrigger={() => setButtonPopupVoluntary(false)}>
+                  <ModalH2>Escolha o tipo de voluntário</ModalH2>
+                  <ModalImg src={EscolhaDark} alt="Avatar"/>
+                  <ModalButton href="./RegisterFormado">
+                    Formado
+                  </ModalButton>
+                  <ModalButton href="./RegisterEstagiario">
+                    Estagiário
+                  </ModalButton>
+              </Modal>
+
         </Container>
     )
 }
