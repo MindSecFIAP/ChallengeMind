@@ -19,7 +19,7 @@ export const NavWrapper = styled.div`
     position: sticky;
 
     @media screen and (max-width: 768px) {
-        justify-content: center;
+        justify-content: space-around;
     }
 `
 

@@ -53,7 +53,7 @@ const FormLogin = () => {
                     <ModalButton onClick={() => setButtonPopupVoluntary(true)}>
                       Voluntário
                     </ModalButton>
-                    <ModalButton href="./RegisterUser" id="btnUser">
+                    <ModalButton href="./registerUser" id="btnUser">
                       Usuário
                     </ModalButton>
               </Modal>
@@ -61,10 +61,10 @@ const FormLogin = () => {
               <Modal trigger={buttonPopupVoluntary} setTrigger={() => setButtonPopupVoluntary(false)}>
                   <ModalH2>Escolha o tipo de voluntário</ModalH2>
                   <ModalImg src={EscolhaDark} alt="Avatar"/>
-                  <ModalButton href="./RegisterFormado">
+                  <ModalButton href="./registerFormado">
                     Formado
                   </ModalButton>
-                  <ModalButton href="./RegisterEstagiario">
+                  <ModalButton href="./registerEstagiario">
                     Estagiário
                   </ModalButton>
               </Modal>
