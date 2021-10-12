@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Logo from "../../assets/img/Mind.svg"
-import Escolha from "../../assets/img/avatar/escolha.svg";
-import EscolhaDark from "../../assets/img/avatar/escolhaDark.svg";
+import Escolha from "../../assets/img/escolha.svg";
+import EscolhaDark from "../../assets/img/escolhaDark.svg";
 import {Modal} from '../Modal'
 import {
   Container,
@@ -15,7 +15,6 @@ import {
 } from './FormLoginElements'
 
 import{
-  ModalWrapper,
   ModalH2,
   ModalImg,
   ModalButton,

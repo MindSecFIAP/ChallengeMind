@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Color} from '../color'
+import Background from "../../assets/img/background-img.svg"
 
 export const Container = styled.div`
     min-height: 692px;
@@ -11,7 +12,8 @@ export const Container = styled.div`
     z-index: 0;
     overflow: hidden;
     padding: 30px 5px;
-    background: #333333;
+    background: ${Color.darkgray} url(${Background}) repeat fixed;
+    background-size: 50px;
 `
 
 export const FormWrapper = styled.div`
