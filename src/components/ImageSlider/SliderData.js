@@ -1,18 +1,18 @@
 export const SliderData = [
     {
-        image: require("../../assets/avatar/avatar (1).svg").defaul
+        image: require("../../assets/avatar/avatar (1).svg").default
     },
     {
-        image: require("../../assets/avatar/avatar (2).svg").defaul
+        image: require("../../assets/avatar/avatar (2).svg").default
     },
     {
-        image: require("../../assets/avatar/avatar (3).svg").defaul
+        image: require("../../assets/avatar/avatar (3).svg").default
     },
     {
-        image: require("../../assets/avatar/avatar (4).svg").defaul
+        image: require("../../assets/avatar/avatar (4).svg").default
     },
     {
-        image: require("../../assets/avatar/avatar (5).svg").defaul
+        image: require("../../assets/avatar/avatar (5).svg").default
     },
     {
         image: require("../../assets/avatar/avatar (6).svg").default

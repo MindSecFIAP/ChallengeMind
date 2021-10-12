@@ -3,7 +3,7 @@ import {FaArrowAltCircleLeft, FaArrowAltCircleRight} from 'react-icons/fa'
 
 export const Slider = styled.section`
     position: relative;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +11,8 @@ export const Slider = styled.section`
 
 export const LeftArrow = styled(FaArrowAltCircleLeft)`
     position: absolute;
-    top: 50%;
-    left: 32px;
+    top: 60%;
+    left: 0;
     font-size: 3rem;
     color: #000;
     z-index: 10;
@@ -22,8 +22,8 @@ export const LeftArrow = styled(FaArrowAltCircleLeft)`
 
 export const RightArrow = styled(FaArrowAltCircleRight)`
     position: absolute;
-    top: 50%;
-    right: 32px;
+    top: 60%;
+    right: 0;
     font-size: 3rem;
     color: #000;
     z-index: 10;
