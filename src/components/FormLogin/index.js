@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Logo from "../../assets/img/Mind.svg"
-import Escolha from "../../assets/img/avatar/escolha.svg";
-import EscolhaDark from "../../assets/img/avatar/escolhaDark.svg";
+import Escolha from "../../assets/img/escolha.svg";
+import EscolhaDark from "../../assets/img/escolhaDark.svg";
 import {Modal} from '../Modal'
 import {
   Container,
@@ -15,7 +15,6 @@ import {
 } from './FormLoginElements'
 
 import{
-  ModalWrapper,
   ModalH2,
   ModalImg,
   ModalButton,
@@ -54,7 +53,7 @@ const FormLogin = () => {
                     <ModalButton onClick={() => setButtonPopupVoluntary(true)}>
                       Voluntário
                     </ModalButton>
-                    <ModalButton href="./RegisterUser" id="btnUser">
+                    <ModalButton href="./registerUser" id="btnUser">
                       Usuário
                     </ModalButton>
               </Modal>
@@ -62,10 +61,10 @@ const FormLogin = () => {
               <Modal trigger={buttonPopupVoluntary} setTrigger={() => setButtonPopupVoluntary(false)}>
                   <ModalH2>Escolha o tipo de voluntário</ModalH2>
                   <ModalImg src={EscolhaDark} alt="Avatar"/>
-                  <ModalButton href="./RegisterFormado">
+                  <ModalButton href="./registerFormado">
                     Formado
                   </ModalButton>
-                  <ModalButton href="./RegisterEstagiario">
+                  <ModalButton href="./registerEstagiario">
                     Estagiário
                   </ModalButton>
               </Modal>

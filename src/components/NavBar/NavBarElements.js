@@ -17,6 +17,10 @@ export const NavWrapper = styled.div`
     background-color: ${Color.darkblue};
     width: 100vw;
     position: sticky;
+
+    @media screen and (max-width: 768px) {
+        justify-content: space-around;
+    }
 `
 
 export const LogoLink = styled.a`
