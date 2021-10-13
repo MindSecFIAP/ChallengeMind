@@ -1,7 +1,7 @@
 import React from 'react'
 import Chat from '../../components/Chat'
-import SideBar from '../../components/SideBar'
-import {Container} from '../../components/SideBar/SideBarElements'
+import SideBar from '../../components/UserSideBar'
+import {Container} from '../../components/UserSideBar/SideBarElements'
 
 const ChatUser = () => {
     return (
