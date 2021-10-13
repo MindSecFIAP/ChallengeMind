@@ -43,4 +43,7 @@ export const AvatarContainer = styled.div`
 
 export const Avatar = styled.img`
     height: 200px;
+    @media only screen and (min-width:1100px){
+        height: 400px;
+    }
 `

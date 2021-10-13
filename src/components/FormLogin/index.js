@@ -61,10 +61,10 @@ const FormLogin = () => {
               <Modal trigger={buttonPopupVoluntary} setTrigger={() => setButtonPopupVoluntary(false)}>
                   <ModalH2>Escolha o tipo de voluntário</ModalH2>
                   <ModalImg src={EscolhaDark} alt="Avatar"/>
-                  <ModalButton href="./registerFormado">
+                  <ModalButton href="./registerGraduated">
                     Formado
                   </ModalButton>
-                  <ModalButton href="./registerEstagiario">
+                  <ModalButton href="./registerIntern">
                     Estagiário
                   </ModalButton>
               </Modal>
