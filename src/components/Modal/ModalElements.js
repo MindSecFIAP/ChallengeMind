@@ -10,6 +10,7 @@ export const ModalContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.7);
 
     position: fixed;
+    left: 0;
     top: 0;
 
     display: flex;
