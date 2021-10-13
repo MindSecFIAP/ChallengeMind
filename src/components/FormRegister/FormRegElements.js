@@ -15,7 +15,7 @@ export const Container = styled.div`
     overflow: hidden;
     
     @media screen and (max-width: 1080px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 100px 0 50px 0;
     }
 `
@@ -86,6 +86,17 @@ export const Button = styled.button`
     }
 `
 
+export const FormH1 = styled.h1`
+    color: ${Color.white};
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid;
+`
+
+//--------- Radio Button
+
 export const RadioWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +130,26 @@ export const FormRadioLabel = styled.label`
     ${FormRadio}:hover + & {
         cursor: pointer;
     }
-
-    
 }   
 `
+
+//--------- Select Tag
+
+export const SelectWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+export const FormSelect = styled.select`
+    padding: 16px 16px;
+    margin-bottom: 32px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    background-color: ${Color.white};
+`
+
+export const SelectOption = styled.option`
+    font-family: 'Montserrat';
+`
+

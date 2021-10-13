@@ -14,7 +14,7 @@ export const Container = styled.div`
     padding: 30px 5px;
     background: ${Color.darkgray} url(${Background}) repeat fixed;
     background-size: 50px;
-`
+    `
 
 export const FormWrapper = styled.div`
     display: flex;
@@ -23,10 +23,11 @@ export const FormWrapper = styled.div`
     justify-content: center;
     height: 100%;
     z-index: 2;
-
+    overflow: hidden;
+    
     @media screen and (max-height: 600px) {
-        margin: 3rem 0;
-        overflow-y: auto;
+        margin-top: 28px;
+        justify-content: flex-start;
     }
 `
 
@@ -67,6 +68,10 @@ export const ButtonContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
+    
+    @media screen and (max-width: 360px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const Button = styled.a`
@@ -96,6 +101,9 @@ export const Button = styled.a`
         width: 45%;
         min-width: 0px;
         font-size: 1rem;
+    }
+    @media screen and (max-width: 360px) {
+        width: 100%;
     }
 `
 
