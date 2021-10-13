@@ -48,7 +48,7 @@ const RegisterIntern = () => {
                       <FormLabel for="types">Linha terapêutica</FormLabel>
                       <FormSelect name="type" id="types">
                         <SelectOption value="" disabled selected>
-                          Linha terapêutica
+                            Selecione
                         </SelectOption>
 
                         <SelectOption value="type_psica">

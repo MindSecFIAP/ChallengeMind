@@ -4,7 +4,7 @@ import LoginPage from "./pages/index.js";
 import RegisterUser from "./pages/register/user.js";
 import RegisterGraduated from './pages/register/graduated.js';
 import RegisterIntern from './pages/register/intern.js';
-// import {ChatUser} from './pages/chats/ChatUser'
+import ChatUser from './pages/chat/user.js'
 // import {ChatVoluntario} from './pages/chats/ChatVoluntario';
 // import { ChatBot } from './pages/chats/ChatBot';
 
@@ -17,11 +17,11 @@ function App() {
           <Route path="/registerUser" exact component={RegisterUser} />
           <Route path="/registerGraduated" exact component={RegisterGraduated} /> 
           <Route path="/registerIntern" exact component={RegisterIntern} />
+          <Route path="/chatUser" exact component={ChatUser} />
           {/* 
           <Route path="/chatBot" exact component={ChatBot} />
           <Route path="/chatVoluntario" exact component={ChatVoluntario} />
-          <Route path="/chatUser" exact component={ChatUser} />
-        */}
+          */}
           <Route path="/" component={LoginPage} />
         </Switch>
     </>
