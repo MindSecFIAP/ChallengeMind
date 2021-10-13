@@ -15,7 +15,7 @@ export const Container = styled.div`
     overflow: hidden;
     
     @media screen and (max-width: 1080px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 100px 0 50px 0;
     }
 `

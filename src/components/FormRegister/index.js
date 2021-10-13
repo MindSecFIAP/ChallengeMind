@@ -18,7 +18,6 @@ const FormRegister = (props) => {
     return (
         <>
             <Container>
-                <ImageSlider slides={SliderData}/>
                 <FormContainer>
                     <Form>
                         <FormH1>Cadastro {(props.title) == null ? "de Usuário" : props.title}</FormH1>
@@ -29,8 +28,11 @@ const FormRegister = (props) => {
                             {props.lblCrp}
                             {props.crp}
 
-                            {props.lblInstituicao}
-                            {props.instituicao}
+                            {props.lblRm}
+                            {props.rm}
+
+                            {props.lblInstitution}
+                            {props.institution}
 
                             {props.lblCpf}
                             {props.cpf}
@@ -56,6 +58,7 @@ const FormRegister = (props) => {
                                     <FormRadioLabel for="others">Outros</FormRadioLabel>
                             </RadioWrapper>
                             
+                            {props.lblTime}
                             {props.time}
 
                             {props.terapeutica}
@@ -69,6 +72,7 @@ const FormRegister = (props) => {
                         </FormWrapper>
                     </Form>
                 </FormContainer>
+                <ImageSlider slides={SliderData}/>
             </Container>
         </>
     )
