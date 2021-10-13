@@ -119,7 +119,5 @@ export const FormRadioLabel = styled.label`
     ${FormRadio}:hover + & {
         cursor: pointer;
     }
-
-    
 }   
 `

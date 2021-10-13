@@ -19,8 +19,6 @@ const ImageSlider = ({slides}) => {
         setCurrent(current === 0 ? length - 1 : current - 1) 
     }
 
-    
-
     if(!Array.isArray(slides || slides.length <= 0)) {
         return null;
     }
@@ -33,7 +31,7 @@ const ImageSlider = ({slides}) => {
             {SliderData.map((slide, index) => {
                 return  (
                     <AvatarContainer className={index === current ? 'slide active' : 'slide'} key={index}>
-                        {index === current && (<Avatar src={slide.image} alt={"Avatar "+index}/>)}                       
+                        {index === current && (<Avatar src={slide.image} alt={"Avatar "+index}/>)}
                     </AvatarContainer>
                 )
             })}
