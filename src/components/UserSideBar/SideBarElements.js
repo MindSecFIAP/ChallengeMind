@@ -58,6 +58,11 @@ export const ChatItem = styled.div`
     justify-content: space-between;
     flex-direction: row;
     background-color: ${({isOpen}) => (isOpen ? "rgba(125, 136, 160,0.2)" : "")};
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        background-color: rgba(125, 136, 160,0.2);
+    }
 
     &:last-child{
         border-bottom: 1px solid ${Color.bluegray};
@@ -82,7 +87,7 @@ export const Name = styled.h2`
 
 export const Message = styled.p`
     font-size: 14px;
-    color: ${Color.white};
+    color: rgba(255,255,255, .5);
     display: -webkit-box;
    -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
