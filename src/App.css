@@ -4,8 +4,15 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 *:focus {
     outline: none;
+}
+
+html{
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
 }
