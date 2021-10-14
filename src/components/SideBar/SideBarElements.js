@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {Color} from '../color'
-import { FormInput } from '../form';
+import {FormInput} from '../form';
+import {GoAlert} from 'react-icons/go';
 
 export const SideBarContainer = styled.div`
     background-color: ${Color.darkblue};
@@ -51,7 +52,6 @@ export const SideBarInput = styled(FormInput)`
 
 export const ChatWrapper = styled.div`
     cursor: pointer;
-
 `;
 
 export const ChatItem = styled.div`
@@ -88,7 +88,8 @@ export const ItemWrapper = styled.div`
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-`
+`;
+
 export const Name = styled.h2`
     font-size: 16px;
     color: ${Color.white};
@@ -100,4 +101,79 @@ export const Message = styled.p`
     display: -webkit-box;
    -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
+`;
+
+// SideBar do Psicologo
+
+export const StatusWrapper = styled.div`
+    height: 200px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(125, 136, 160,0.05);
+`;
+
+export const ReviewWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const InfoWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const AlertIcon = styled(GoAlert)`
+    color: ${({value}) => (value <= 2 ? '#00FF00' : (value > 4 ? '#FF0000' : '#FF0'))};
+    `;
+
+export const UserName = styled.h1`
+
+`
+
+export const UserRate = styled.h2`
+    font-size: 20px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+`
+
+export const ReviewUser = styled.p`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`
+
+export const Review = styled.div`
+    height: fit-content;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid ${Color.bluegray};
+
+    &:last-child{
+        margin-bottom: 112px;
+    }
+`;
+
+
+export const ReviewAvatar = styled.img`
+    height: 50px;
+`;
+
+export const ReviewName = styled.p`
+`;
+
+export const ReviewRate = styled.p`
+
+`;
+
+export const ReviewText = styled.p`
+    font-size: 15px;
+    color: rgba(255,255,255, .5);
 `;

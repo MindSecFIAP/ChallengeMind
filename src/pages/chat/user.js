@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
 import Chat from '../../components/Chat'
-import SideBar from '../../components/UserSideBar'
+import SideBar from '../../components/SideBar'
 import {RatingData} from '../../components/RatingData'
 import {SideBarWrapper,
         SideBarInput,
@@ -11,8 +11,8 @@ import {SideBarWrapper,
         Name,
         Message,
         ItemWrapper,
-        InputWrapper} from '../../components/UserSideBar/SideBarElements'
-import {UserData} from '../../components/UserSideBar/UserData'
+        InputWrapper} from '../../components/SideBar/SideBarElements'
+import {UserData} from '../../components/SideBar/UserData'
 import {Modal} from '../../components/Modal/';
 import {ModalH2,
         ModalContent,

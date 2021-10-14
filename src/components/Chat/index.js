@@ -25,8 +25,6 @@ import {ModalH2,
         FormWrapper,
         ModalTextArea,} from '../Modal/ModalElements';
 
-
-
 const Chat = (props) => {
     const [report, setReport] = useState(false);
 
@@ -81,8 +79,6 @@ const Chat = (props) => {
                     </ModalForm>
                 </ModalContent>
             </Modal>
-        
-            
         </>
     )
 }
