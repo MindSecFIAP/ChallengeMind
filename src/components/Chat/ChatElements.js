@@ -35,6 +35,7 @@ export const NavWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 `
 
 export const ChatContent = styled.div`

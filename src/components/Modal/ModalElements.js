@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Color} from '../color'
 
 import {FaTimesCircle} from 'react-icons/fa'
+import { Avatar } from "../Chat/ChatElements";
 
 export const ModalContainer = styled.div`
     width: 100%;
@@ -33,10 +34,10 @@ export const ModalWrapper = styled.div`
 `
 
 export const Icon = styled(FaTimesCircle)`
-    font-size: 2rem;
+    font-size: 24px;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 8px;
+    right: 8px;
 
     color: ${Color.black};
     opacity: 0.7;
@@ -91,8 +92,8 @@ export const ModalContent = styled.div`
     width: 100%;
 `
 
+// Modal de Denúncia
 export const ModalForm = styled.form`
-
 `
 
 export const FormWrapper = styled.div`
@@ -107,4 +108,66 @@ export const ModalTextArea = styled.textarea`
     border-radius: 4px;
     resize: none;
     padding: 4px;
+`
+
+// Perfil do Psicólogo/Estagiário
+
+export const InfoSection = styled.div`
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+`
+
+export const InfoWrapper = styled.div`
+    margin-left: 12px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+`
+
+
+export const Info = styled.p`
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    &:hover{
+        cursor: default;
+    }
+`
+
+export const RatingWrapper = styled.div`
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    margin-top: 32px;
+`
+
+export const Rating = styled.div`
+    text-align:center;
+    align-self: center;
+`
+
+export const RatingImg = styled.img`
+    width: 75px;
+`
+
+export const RatingName = styled.p`
+    font-size: 14px;
+`
+
+export const RatingQuantity = styled.p`
+  transform: translate(425%,375%);
+  background-color: ${Color.darkyellow};
+  width: fit-content;
+  padding: 1px;
+  min-width: 20px;
+  text-align: center;
+`
+
+export const ModalAvatar = styled(Avatar)`
+    height: 125px;;
 `

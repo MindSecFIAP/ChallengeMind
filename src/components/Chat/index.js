@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {FaFlag} from 'react-icons/fa'
 import {ChatData} from './ChatData'
+import {RatingData} from '../RatingData'
 import {ChatContainer,
         ChatNav,
         NavWrapper,
@@ -24,23 +25,34 @@ import {ModalH2,
         ModalContent,
         ModalForm,
         FormWrapper,
-        ModalTextArea
+        ModalTextArea,
+        InfoWrapper,
+        Info,
+        RatingWrapper,
+        Rating,
+        RatingImg,
+        RatingName,
+        RatingQuantity,
+        InfoSection,
+        ModalAvatar
 } from '../Modal/ModalElements';
+import { RiMessage3Fill, RiStarSmileFill, RiTimeFill } from 'react-icons/ri';
 
 
 
 const Chat = () => {
-    const [betray, setBetray] = useState(false);
+    const [report, setReport] = useState(false);
+    const [profile, setProfile] = useState(true);
     return (
         <>
             <ChatContainer>
                 <ChatNav>
-                    <NavWrapper>
+                    <NavWrapper onClick={() => setProfile(true)} ariallabel="A">
                         <Avatar src={ImgAvatar}/>
                         <Name>Carina</Name>
                     </NavWrapper>
-                    <FlagIcon onclick="ModalBetray.open()">
-                        <FaFlag onClick={() => setBetray(true)}/>
+                    <FlagIcon onClick={() => setReport(true)}>
+                        <FaFlag/>
                     </FlagIcon>
                 </ChatNav>
                 <ChatContent>
@@ -63,23 +75,47 @@ const Chat = () => {
                 </ChatFooter>
             </ChatContainer>
 
-            <Modal trigger={betray} setTrigger={() => setBetray(false)}>
+            <Modal trigger={report} setTrigger={() => setReport(false)}>
                 <ModalContent>
+                    <ModalH2>Nos diga abaixo a sua denúncia</ModalH2>
                     <ModalForm method="GET" action="">
                         <FormWrapper>
-                            <ModalH2>Nos diga abaixo a sua denúncia</ModalH2>
                             <ModalTextArea
-                                name="betray"
-                                id="betray"
+                                name="report"
+                                id="report"
                                 rows="15"
                             ></ModalTextArea>
-                            <ModalButton className="btn" onclick="ModalBetray.close()">
+                            <ModalButton>
                                 {" "}
                                     Reportar!
                                 {" "}
                             </ModalButton>
                         </FormWrapper>
                     </ModalForm>
+                </ModalContent>
+            </Modal>
+        
+            <Modal trigger={profile} setTrigger={() => setProfile(false)}>
+                <ModalContent>
+                    <ModalH2>Perfil da Carina</ModalH2>
+                    <InfoSection>
+                        <ModalAvatar src={ImgAvatar}/>
+                        <InfoWrapper>
+                            <Info><RiStarSmileFill style={{marginRight: "8px"}}/>4.5</Info>
+                            <Info><RiMessage3Fill style={{marginRight: "8px"}}/>30</Info>
+                            <Info><RiTimeFill style={{marginRight: "8px"}}/>4 Meses</Info>
+                        </InfoWrapper>
+                    </InfoSection>
+                    <RatingWrapper>
+                        {RatingData.map((data) => {
+                                return (
+                                <Rating>
+                                    <RatingQuantity>{data.quantity}</RatingQuantity>
+                                    <RatingImg src={data.src}/>
+                                    <RatingName>{data.name}</RatingName>
+                                </Rating>
+                        )})}
+                    </RatingWrapper>
                 </ModalContent>
             </Modal>
         </>
