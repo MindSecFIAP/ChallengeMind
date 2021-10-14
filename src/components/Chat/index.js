@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {FaFlag} from 'react-icons/fa'
+import {ChatData} from './ChatData'
 import {ChatContainer,
         ChatNav,
+        NavWrapper,
         ChatContent,
         ChatFooter,
         Avatar,
@@ -11,38 +14,45 @@ import {ChatContainer,
         Time,
         ChatInput,
         ChatSubmit,
+        FlagIcon,
         SubmitIcon,} from './ChatElements'
+import ImgAvatar from "../../assets/avatar/avatar (33).svg";
+
+import {Modal} from '../Modal';
+import {ModalH2,
+        ModalButton,
+        ModalContent,
+        ModalForm,
+        FormWrapper,
+        ModalTextArea
+} from '../Modal/ModalElements';
+
+
 
 const Chat = () => {
+    const [betray, setBetray] = useState(false);
     return (
         <>
             <ChatContainer>
                 <ChatNav>
-                    <Avatar src={Avatar}/>
-                    <Name>Lorem Ipsum</Name>
+                    <NavWrapper>
+                        <Avatar src={ImgAvatar}/>
+                        <Name>Carina</Name>
+                    </NavWrapper>
+                    <FlagIcon onclick="ModalBetray.open()">
+                        <FaFlag onClick={() => setBetray(true)}/>
+                    </FlagIcon>
                 </ChatNav>
-
                 <ChatContent>
-                    <GroupMessages msgType="sent">
-                        <Messages msgType="sent">
-                            <MsgText>Lorem Ipsum</MsgText>
-                            <Time>11:25</Time>
-                        </Messages>
-                        <Messages msgType="sent">
-                            <MsgText>Lurempzinho testes testeasdasdasdsa</MsgText>
-                            <Time>19:20</Time>
-                        </Messages>
-                    </GroupMessages>
-                    <GroupMessages msgType="received">
-                        <Messages msgType="received">
-                            <MsgText>Lorem Ipsum</MsgText>
-                            <Time>11:25</Time>
-                        </Messages>
-                        <Messages msgType="received">
-                            <MsgText>Lurempzinho</MsgText>
-                            <Time>19:20</Time>
-                        </Messages>
-                    </GroupMessages>
+                        {ChatData.map((data) => {
+                            return (
+                            <GroupMessages msgType={data.msgType}>
+                                <Messages msgType={data.msgType}>
+                                    <MsgText>{data.msgText}</MsgText>
+                                    <Time>{data.msgTime}</Time>
+                                </Messages>
+                            </GroupMessages>
+                        )})}
                 </ChatContent>
 
                 <ChatFooter>
@@ -52,6 +62,26 @@ const Chat = () => {
                     </ChatSubmit>
                 </ChatFooter>
             </ChatContainer>
+
+            <Modal trigger={betray} setTrigger={() => setBetray(false)}>
+                <ModalContent>
+                    <ModalForm method="GET" action="">
+                        <FormWrapper>
+                            <ModalH2>Nos diga abaixo a sua denúncia</ModalH2>
+                            <ModalTextArea
+                                name="betray"
+                                id="betray"
+                                rows="15"
+                            ></ModalTextArea>
+                            <ModalButton className="btn" onclick="ModalBetray.close()">
+                                {" "}
+                                    Reportar!
+                                {" "}
+                            </ModalButton>
+                        </FormWrapper>
+                    </ModalForm>
+                </ModalContent>
+            </Modal>
         </>
     )
 }

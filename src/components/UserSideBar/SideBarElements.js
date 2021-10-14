@@ -7,6 +7,10 @@ export const SideBarContainer = styled.div`
     height: 100vh;
     width: 30vw;
     max-width: 400px;
+
+    @media screen and (max-width: 768px){
+        display:none;
+    }
 `;
 
 export const SideBarWrapper = styled.div`
@@ -28,7 +32,7 @@ export const SideBarWrapper = styled.div`
         }
 
         &::-webkit-scrollbar-track{
-            background: ${Color.white};
+            background: transparent;
         }
 `;
 
@@ -36,7 +40,7 @@ export const InputWrapper = styled.div`
     padding: 16px;
     position: sticky;
     height: 9%;
-`
+`;
 
 export const SideBarInput = styled(FormInput)`
     background-color: ${Color.bluegray};
@@ -47,6 +51,7 @@ export const SideBarInput = styled(FormInput)`
 
 export const ChatWrapper = styled.div`
     cursor: pointer;
+
 `;
 
 export const ChatItem = styled.div`
@@ -66,6 +71,10 @@ export const ChatItem = styled.div`
 
     &:last-child{
         border-bottom: 1px solid ${Color.bluegray};
+    }
+
+    &:first-child{
+        background-color: rgba(125, 136, 160,0.2);
     }
 `;
 
@@ -92,8 +101,3 @@ export const Message = styled.p`
    -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
 `;
-
-export const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-`

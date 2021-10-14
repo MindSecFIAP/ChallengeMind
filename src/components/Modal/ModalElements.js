@@ -54,6 +54,7 @@ export const CloseButton = styled.button`
 
 export const ModalH2 = styled.h2`
     text-align: center;
+    margin-bottom: 16px;
 `
 
 export const ModalImg = styled.img`
@@ -65,7 +66,7 @@ export const ModalImg = styled.img`
 export const ModalButton = styled.a`
     font-size: 1.2rem;
     padding: .8rem 1.2rem;
-    width: 30%;
+    width: 100%;
     min-width: 150px;
     text-align: center;
     border-radius: 4px;
@@ -84,4 +85,26 @@ export const ModalButton = styled.a`
         cursor: pointer;
     }
     margin-top: 16px;
+`
+
+export const ModalContent = styled.div`
+    width: 100%;
+`
+
+export const ModalForm = styled.form`
+
+`
+
+export const FormWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const ModalTextArea = styled.textarea`
+    margin-top: 16px;
+    width: 100%;
+    border-radius: 4px;
+    resize: none;
+    padding: 4px;
 `
