@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {FaFlag} from 'react-icons/fa'
 import {ChatData} from './ChatData'
-import {RatingData} from '../RatingData'
 import {ChatContainer,
         ChatNav,
         NavWrapper,
@@ -18,36 +17,24 @@ import {ChatContainer,
         FlagIcon,
         SubmitIcon,} from './ChatElements'
 import ImgAvatar from "../../assets/avatar/avatar (33).svg";
-
 import {Modal} from '../Modal';
 import {ModalH2,
         ModalButton,
         ModalContent,
         ModalForm,
         FormWrapper,
-        ModalTextArea,
-        InfoWrapper,
-        Info,
-        RatingWrapper,
-        Rating,
-        RatingImg,
-        RatingName,
-        RatingQuantity,
-        InfoSection,
-        ModalAvatar
-} from '../Modal/ModalElements';
-import { RiMessage3Fill, RiStarSmileFill, RiTimeFill } from 'react-icons/ri';
+        ModalTextArea,} from '../Modal/ModalElements';
 
 
 
-const Chat = () => {
+const Chat = (props) => {
     const [report, setReport] = useState(false);
-    const [profile, setProfile] = useState(true);
+
     return (
         <>
             <ChatContainer>
                 <ChatNav>
-                    <NavWrapper onClick={() => setProfile(true)} ariallabel="A">
+                    <NavWrapper onClick={props.open}>
                         <Avatar src={ImgAvatar}/>
                         <Name>Carina</Name>
                     </NavWrapper>
@@ -95,29 +82,7 @@ const Chat = () => {
                 </ModalContent>
             </Modal>
         
-            <Modal trigger={profile} setTrigger={() => setProfile(false)}>
-                <ModalContent>
-                    <ModalH2>Perfil da Carina</ModalH2>
-                    <InfoSection>
-                        <ModalAvatar src={ImgAvatar}/>
-                        <InfoWrapper>
-                            <Info><RiStarSmileFill style={{marginRight: "8px"}}/>4.5</Info>
-                            <Info><RiMessage3Fill style={{marginRight: "8px"}}/>30</Info>
-                            <Info><RiTimeFill style={{marginRight: "8px"}}/>4 Meses</Info>
-                        </InfoWrapper>
-                    </InfoSection>
-                    <RatingWrapper>
-                        {RatingData.map((data) => {
-                                return (
-                                <Rating>
-                                    <RatingQuantity>{data.quantity}</RatingQuantity>
-                                    <RatingImg src={data.src}/>
-                                    <RatingName>{data.name}</RatingName>
-                                </Rating>
-                        )})}
-                    </RatingWrapper>
-                </ModalContent>
-            </Modal>
+            
         </>
     )
 }

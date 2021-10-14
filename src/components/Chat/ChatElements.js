@@ -89,13 +89,13 @@ export const Name = styled.h1`
 export const GroupMessages = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: ${({msgType}) => (msgType != "sent" ? "flex-start" : "flex-end")};
+    align-items: ${({msgType}) => (msgType !== "sent" ? "flex-start" : "flex-end")};
 `
 
 export const Messages = styled.div`
     padding: 16px;
     margin: 4px;
-    background-color: ${({msgType}) => (msgType != "sent" ? "#222" : "#293c66")};
+    background-color: ${({msgType}) => (msgType !== "sent" ? "#222" : "#293c66")};
     color: ${Color.white};
     border-radius: 12px;
     box-shadow: 2px 2px 5px -3px ${Color.black};
@@ -103,7 +103,7 @@ export const Messages = styled.div`
     min-width: 200px;
     
     &:first-child{
-        border-radius: ${({msgType}) => (msgType != "sent" ? "0px 12px 12px 12px" : "12px 12px 0px 12px")};
+        border-radius: ${({msgType}) => (msgType !== "sent" ? "0px 12px 12px 12px" : "12px 12px 0px 12px")};
     }
     
     @media screen and (max-width: 768px){
