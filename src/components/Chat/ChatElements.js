@@ -151,6 +151,7 @@ export const SubmitIcon = styled(RiSendPlane2Fill)`
         transform: scale(1.05);
     }
 `
+
 export const FlagIcon = styled.div`
     font-size: 24px;
     cursor: pointer;
