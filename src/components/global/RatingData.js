@@ -1,31 +1,38 @@
+import Amigavel from '../../assets/elogios/elogio_amigavel.svg'
+import Atencioso from '../../assets/elogios/elogio_atencioso.svg'
+import Confiavel from '../../assets/elogios/elogio_confiavel.svg'
+import Focado from '../../assets/elogios/elogio_focado.svg'
+import Motivacional from '../../assets/elogios/elogio_motivacional.svg'
+import Sabio from '../../assets/elogios/elogio_sabio.svg'
+
 export const RatingData = [
     {
-        src: require("../assets/elogios/elogio_amigavel.svg").default,
+        src: Amigavel,
         name: "Amigável",
         quantity: 7,
     },
     {
-        src: require("../assets/elogios/elogio_atencioso.svg").default,
+        src: Atencioso,
         name: "Atencioso",
         quantity: 2,
     },
     {
-        src: require("../assets/elogios/elogio_confiavel.svg").default,
+        src: Confiavel,
         name: "Confiável",
         quantity: 1,
     },
     {
-        src: require("../assets/elogios/elogio_focado.svg").default,
+        src: Focado,
         name: "Focado",
         quantity: 0,
     },
     {
-        src: require("../assets/elogios/elogio_motivacional.svg").default,
+        src: Motivacional,
         name: "Motivacional",
         quantity: 5,
     },
     {
-        src: require("../assets/elogios/elogio_sabio.svg").default,
+        src: Sabio,
         name: "Sábio",
         quantity: 2,
     },
