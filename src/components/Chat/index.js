@@ -15,8 +15,7 @@ import {ChatContainer,
         ChatInput,
         ChatSubmit,
         FlagIcon,
-        SubmitIcon,
-        OpenIcon} from './ChatElements'
+        SubmitIcon} from './ChatElements'
 import ImgAvatar from "../../assets/avatar/avatar (33).svg";
 import {Modal} from '../Modal';
 import {ModalH2,
@@ -34,7 +33,7 @@ const Chat = (props) => {
         <>
             <ChatContainer>
                 <ChatNav>
-                    {props.children}
+                    {props.openIcon}
                     <NavWrapper>
                         <Avatar src={ImgAvatar} onClick={props.open}/>
                         <Name onClick={props.open}>Carina</Name>
