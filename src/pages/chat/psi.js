@@ -13,7 +13,7 @@ import {SideBarWrapper,
         Review,
         ReviewWrapper,
         ReviewAvatar,
-        Name,
+        ReviewName,
         ReviewRate,
         ReviewText,
         ReviewUser} from '../../components/SideBar/SideBarElements'
@@ -43,7 +43,7 @@ const ChatPsi = () => {
                                         <ReviewWrapper>
                                             <ReviewUser>
                                                 <ReviewAvatar src={data.src}/>
-                                                <Name>{data.username}</Name>
+                                                <ReviewName>{data.username}</ReviewName>
                                             </ReviewUser>
                                             <ReviewRate><AlertIcon value={data.value}/>{data.value}</ReviewRate>
                                         </ReviewWrapper>

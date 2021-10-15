@@ -119,6 +119,7 @@ export const ReviewWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 12px;
 `;
 
 export const InfoWrapper = styled.div`
@@ -130,17 +131,19 @@ export const InfoWrapper = styled.div`
 
 export const AlertIcon = styled(GoAlert)`
     color: ${({value}) => (value <= 2 ? '#00FF00' : (value > 4 ? '#FF0000' : '#FF0'))};
-    `;
+    margin-right: 8px;
+`;
 
 export const UserName = styled.h1`
-
-`
+    color: ${Color.white};
+    `
 
 export const UserRate = styled.h2`
-    font-size: 20px;
+    font-size: 24px;
     display:flex;
     flex-direction: row;
     align-items: center;
+    color: ${Color.white};
 `
 
 export const ReviewUser = styled.p`
@@ -167,13 +170,21 @@ export const ReviewAvatar = styled.img`
 `;
 
 export const ReviewName = styled.p`
+    margin-left: 8px;
+    font-size: 20px;
+    color: ${Color.white};
+
 `;
 
 export const ReviewRate = styled.p`
-
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    color: ${Color.white};
 `;
 
 export const ReviewText = styled.p`
     font-size: 15px;
     color: rgba(255,255,255, .5);
+    text-indent: 24px;
 `;

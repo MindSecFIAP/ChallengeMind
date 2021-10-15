@@ -33,9 +33,7 @@ const ImageSlider = ({slides}) => {
                     <AvatarContainer className={index === current ? 'slide active' : 'slide'} key={index}>
                         {index === current && (<Avatar src={slide.image} alt={"Avatar "+index}/>)}
                     </AvatarContainer>
-                )
-            })}
-
+                )})}
         </Slider>
     )
 }
