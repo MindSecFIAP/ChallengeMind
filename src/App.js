@@ -6,6 +6,7 @@ import RegisterGraduated from './pages/register/graduated.js';
 import RegisterIntern from './pages/register/intern.js';
 import ChatUser from './pages/chat/user.js';
 import ChatPsi from './pages/chat/psi.js';
+import PsiProfile from './pages/profile/psi.js';
 // import { ChatBot } from './pages/chats/ChatBot';
 
 import "./App.css";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/registerIntern" exact component={RegisterIntern} />
           <Route path="/chatUser" exact component={ChatUser} />
           <Route path="/chatPsi" exact component={ChatPsi} />
+          <Route path="/profile" exact component={PsiProfile} />
           {/* 
           <Route path="/chatBot" exact component={ChatBot} />
           */}

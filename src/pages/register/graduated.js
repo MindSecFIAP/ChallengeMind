@@ -4,7 +4,7 @@ import Mind from "../../assets/img/Mind.svg"
 import { ImgLogo } from '../../components/NavBar/NavBarElements'
 import FormRegister from '../../components/FormRegister'
 import {FormLabel,
-        FormInput} from '../../components/form'
+        FormInput} from '../../components/global/form'
 import {RadioWrapper,
         FormRadio,
         FormRadioLabel,

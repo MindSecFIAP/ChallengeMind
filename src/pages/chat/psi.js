@@ -67,9 +67,7 @@ const ChatPsi = () => {
                             )})}
                     </SideBarWrapper>
                 </SideBar>
-                <Chat>
-                    <OpenIcon onClick={toggle}/>               
-                </Chat>
+                <Chat openIcon={<OpenIcon onClick={toggle}/>} />
             </Container>
         </>
     )

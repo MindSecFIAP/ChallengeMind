@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {Color} from '../color'
-import {FormInput} from '../form';
+import {Color} from '../global/color'
+import {FormInput} from '../global/form';
 import {GoAlert} from 'react-icons/go';
 
 let pHeight = window.innerHeight
