@@ -3,6 +3,7 @@ import {FormInput} from "../form"
 import {RiSendPlane2Fill} from 'react-icons/ri'
 import {Color} from "../color"
 import Background from "../../assets/img/background-img.svg"
+import {MdChevronRight} from 'react-icons/md'
 
 let iHeight = window.innerHeight
 
@@ -36,6 +37,16 @@ export const NavWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+`
+
+export const OpenIcon = styled(MdChevronRight)`
+    font-size: 32px;
+    margin-right: 8px;
+    cursor: pointer;
+ 
+    @media screen and (min-width: 768px){
+        display: none;
+    }
 `
 
 export const ChatContent = styled.div`

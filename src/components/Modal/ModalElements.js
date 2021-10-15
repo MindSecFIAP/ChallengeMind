@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Color} from '../color'
 
-import {FaTimesCircle} from 'react-icons/fa'
+import {IoMdCloseCircle} from 'react-icons/io'
 import { Avatar } from "../Chat/ChatElements";
 
 export const ModalContainer = styled.div`
@@ -33,17 +33,17 @@ export const ModalWrapper = styled.div`
 
 `
 
-export const Icon = styled(FaTimesCircle)`
+export const Icon = styled(IoMdCloseCircle)`
     font-size: 24px;
     position: absolute;
     top: 8px;
     right: 8px;
 
-    color: ${Color.black};
+    color: ${({isWhite}) => (isWhite ? Color.white : Color.black )};
     opacity: 0.7;
 
     transition: all 0.2s ease-in-out;
-    
+
     &:hover{
         opacity: 1;
         cursor: pointer;

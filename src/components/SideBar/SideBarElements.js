@@ -3,16 +3,29 @@ import {Color} from '../color'
 import {FormInput} from '../form';
 import {GoAlert} from 'react-icons/go';
 
+let pHeight = window.innerHeight
+
 export const SideBarContainer = styled.div`
     background-color: ${Color.darkblue};
-    height: 100vh;
+    height: ${pHeight}px;
     width: 30vw;
-    max-width: 400px;
-
+    overflow: hidden;
+    
     @media screen and (max-width: 768px){
-        display:none;
+        position: fixed;
+        top:0;
+        right: ${({isOpen}) => (isOpen ? '100%' : '0%')};
+        transition: 0.3s ease-in-out;
+        width: 100vw;
+        z-index: 1;
     }
 `;
+
+export const SideBarButton = styled.div`
+    @media screen and (min-width: 768px){
+        display:none;
+    }
+`
 
 export const SideBarWrapper = styled.div`
     display: flex;
@@ -80,6 +93,12 @@ export const ChatItem = styled.div`
 
 export const Avatar = styled.img`
     height: 100%;
+    
+    &.user{
+        @media screen and (max-width: 768px){
+            height: 60%;
+        }
+    }
 `;
 
 export const ItemWrapper = styled.div`
@@ -111,7 +130,10 @@ export const StatusWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(125, 136, 160,0.05);
+
+    @media screen and (max-width: 768px){
+        padding: 16px;
+    }
 `;
 
 export const ReviewWrapper = styled.div`
@@ -136,7 +158,7 @@ export const AlertIcon = styled(GoAlert)`
 
 export const UserName = styled.h1`
     color: ${Color.white};
-    `
+`;
 
 export const UserRate = styled.h2`
     font-size: 24px;
@@ -144,13 +166,13 @@ export const UserRate = styled.h2`
     flex-direction: row;
     align-items: center;
     color: ${Color.white};
-`
+`;
 
 export const ReviewUser = styled.p`
     display: flex;
     flex-direction: row;
     align-items: center;
-`
+`;
 
 export const Review = styled.div`
     height: fit-content;
@@ -160,7 +182,13 @@ export const Review = styled.div`
     border-top: 1px solid ${Color.bluegray};
 
     &:last-child{
-        margin-bottom: 112px;
+        margin-bottom: 120px;
+    }
+    
+    @media screen and (max-width: 768px){
+        &:last-child{
+            margin-bottom: 175px;
+        }
     }
 `;
 

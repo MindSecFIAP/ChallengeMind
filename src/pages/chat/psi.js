@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components";
 import Chat from '../../components/Chat'
 import SideBar from '../../components/SideBar'
@@ -18,6 +18,9 @@ import {SideBarWrapper,
         ReviewText,
         ReviewUser} from '../../components/SideBar/SideBarElements'
 import ImgAvatar from "../../assets/avatar/avatar (29).svg";
+import {SideBarButton} from '../../components/SideBar/SideBarElements'
+import {CloseButton, Icon} from '../../components/Modal/ModalElements'
+import {OpenIcon} from '../../components/Chat/ChatElements'
 
 const Container = styled.div`
     display: flex;
@@ -25,12 +28,24 @@ const Container = styled.div`
     overflow: hidden;
 `
 const ChatPsi = () => {
-    return (
+
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
+
+        return (
         <>
             <Container>
-                <SideBar>
+                <SideBar isOpen={isOpen}>
                     <StatusWrapper>
-                        <Avatar src={ImgAvatar}/>
+                        <SideBarButton>
+                            <CloseButton>
+                                <Icon isWhite={true} onClick={toggle}/>
+                            </CloseButton>
+                        </SideBarButton>
+                        <Avatar src={ImgAvatar} className="user"/>
                         <InfoWrapper>
                             <UserName>José</UserName>
                             <UserRate><AlertIcon value={4.8}/>4.8</UserRate>
@@ -52,7 +67,9 @@ const ChatPsi = () => {
                             )})}
                     </SideBarWrapper>
                 </SideBar>
-                <Chat/>
+                <Chat>
+                    <OpenIcon onClick={toggle}/>               
+                </Chat>
             </Container>
         </>
     )

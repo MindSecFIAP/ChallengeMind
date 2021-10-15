@@ -2,9 +2,10 @@ import React from 'react'
 import {SideBarContainer} from './SideBarElements'
 
 const SideBar = (props) => {
+
     return (
         <>
-            <SideBarContainer>
+            <SideBarContainer isOpen={props.isOpen}>
                 {props.children}
             </SideBarContainer>
         </>
