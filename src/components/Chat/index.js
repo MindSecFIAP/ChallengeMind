@@ -15,32 +15,31 @@ import {ChatContainer,
         ChatInput,
         ChatSubmit,
         FlagIcon,
-        SubmitIcon,} from './ChatElements'
+        SubmitIcon} from './ChatElements'
 import ImgAvatar from "../../assets/avatar/avatar (33).svg";
-
 import {Modal} from '../Modal';
 import {ModalH2,
         ModalButton,
         ModalContent,
         ModalForm,
         FormWrapper,
-        ModalTextArea
-} from '../Modal/ModalElements';
+        ModalTextArea,} from '../Modal/ModalElements';
 
 
-
-const Chat = () => {
-    const [betray, setBetray] = useState(false);
+const Chat = (props) => {
+    const [report, setReport] = useState(false);
+    
     return (
         <>
             <ChatContainer>
                 <ChatNav>
+                    {props.openIcon}
                     <NavWrapper>
-                        <Avatar src={ImgAvatar}/>
-                        <Name>Carina</Name>
+                        <Avatar src={ImgAvatar} onClick={props.open}/>
+                        <Name onClick={props.open}>Carina</Name>
                     </NavWrapper>
-                    <FlagIcon onclick="ModalBetray.open()">
-                        <FaFlag onClick={() => setBetray(true)}/>
+                    <FlagIcon onClick={() => setReport(true)}>
+                        <FaFlag/>
                     </FlagIcon>
                 </ChatNav>
                 <ChatContent>
@@ -63,17 +62,17 @@ const Chat = () => {
                 </ChatFooter>
             </ChatContainer>
 
-            <Modal trigger={betray} setTrigger={() => setBetray(false)}>
+            <Modal trigger={report} setTrigger={() => setReport(false)}>
                 <ModalContent>
+                    <ModalH2>Nos diga abaixo a sua denúncia</ModalH2>
                     <ModalForm method="GET" action="">
                         <FormWrapper>
-                            <ModalH2>Nos diga abaixo a sua denúncia</ModalH2>
                             <ModalTextArea
-                                name="betray"
-                                id="betray"
+                                name="report"
+                                id="report"
                                 rows="15"
                             ></ModalTextArea>
-                            <ModalButton className="btn" onclick="ModalBetray.close()">
+                            <ModalButton>
                                 {" "}
                                     Reportar!
                                 {" "}

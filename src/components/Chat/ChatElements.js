@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import {FormInput} from "../form"
+import {FormInput} from "../global/form"
 import {RiSendPlane2Fill} from 'react-icons/ri'
-import {Color} from "../color"
+import {Color} from "../global/color"
 import Background from "../../assets/img/background-img.svg"
+import {MdChevronRight} from 'react-icons/md'
 
 let iHeight = window.innerHeight
 
@@ -35,6 +36,17 @@ export const NavWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
+`
+
+export const OpenIcon = styled(MdChevronRight)`
+    font-size: 32px;
+    margin-right: 8px;
+    cursor: pointer;
+ 
+    @media screen and (min-width: 768px){
+        display: none;
+    }
 `
 
 export const ChatContent = styled.div`
@@ -88,13 +100,13 @@ export const Name = styled.h1`
 export const GroupMessages = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: ${({msgType}) => (msgType != "sent" ? "flex-start" : "flex-end")};
+    align-items: ${({msgType}) => (msgType !== "sent" ? "flex-start" : "flex-end")};
 `
 
 export const Messages = styled.div`
     padding: 16px;
     margin: 4px;
-    background-color: ${({msgType}) => (msgType != "sent" ? "#222" : "#293c66")};
+    background-color: ${({msgType}) => (msgType !== "sent" ? "#222" : "#293c66")};
     color: ${Color.white};
     border-radius: 12px;
     box-shadow: 2px 2px 5px -3px ${Color.black};
@@ -102,7 +114,7 @@ export const Messages = styled.div`
     min-width: 200px;
     
     &:first-child{
-        border-radius: ${({msgType}) => (msgType != "sent" ? "0px 12px 12px 12px" : "12px 12px 0px 12px")};
+        border-radius: ${({msgType}) => (msgType !== "sent" ? "0px 12px 12px 12px" : "12px 12px 0px 12px")};
     }
     
     @media screen and (max-width: 768px){
@@ -150,6 +162,7 @@ export const SubmitIcon = styled(RiSendPlane2Fill)`
         transform: scale(1.05);
     }
 `
+
 export const FlagIcon = styled.div`
     font-size: 24px;
     cursor: pointer;
