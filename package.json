@@ -2,7 +2,7 @@
   "name": "projeto-mind",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:8080/MindSec/",
+  "proxy": "http://localhost:8080/MindSec",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.23.0",
     "font-awesome": "^4.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

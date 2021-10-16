@@ -19,11 +19,11 @@ const FormRegister = (props) => {
         <>
             <Container>
                 <FormContainer>
-                    <Form>
+                    <Form onSubmit={props.submit}>
                         <FormH1>Cadastro {(props.title) == null ? "de Usuário" : props.title}</FormH1>
                         <FormWrapper>
-                            <FormLabel for="name">Nome</FormLabel>
-                            <FormInput id="name"name="name" type="text"/>
+                            <FormLabel for="name" >Nome</FormLabel>
+                            <FormInput id="name" name="nome" type="text" onChange={props.onChangeName} value={props.vlName}/>
 
                             {props.lblCrp}
                             {props.crp}
@@ -38,23 +38,23 @@ const FormRegister = (props) => {
                             {props.cpf}
 
                             <FormLabel for="cell">Telefone</FormLabel>
-                            <FormInput id="cell" name="cell" type="number"/>
+                            <FormInput id="cell" onChange={props.onChangeCell} name="telefone" type="number" value={props.vlCell}/>
 
                             <FormLabel for="email">Email</FormLabel>        
-                            <FormInput id="email" name="email" type="email"/>
+                            <FormInput id="email" onChange={props.onChangeEmail} name="email" type="email" value={props.vlEmail}/>
 
                             <FormLabel for="date">Data de Nascimento</FormLabel>        
-                            <FormInput id="date" type="date" name="birth" />
+                            <FormInput id="date" onChange={props.onChangeNascimento} type="date" name="dataNascimento" value={props.vlDate}/>
                             
                             <FormLabel>Gênero</FormLabel>        
-                            <RadioWrapper>
-                                    <FormRadio type="radio" name="gender" id="male" value="male" />
+                            <RadioWrapper onChange={props.onChangeGender}>
+                                    <FormRadio type="radio" name="genero" id="male" value="Masculino" />
                                     <FormRadioLabel for="male">Masculino</FormRadioLabel>
 
-                                    <FormRadio type="radio" name="gender" id="female" value="female" />
+                                    <FormRadio type="radio" name="genero" id="female" value="Feminino"/>
                                     <FormRadioLabel for="female">Feminino</FormRadioLabel>
 
-                                    <FormRadio type="radio" name="gender" id="others" value="others" />
+                                    <FormRadio type="radio" name="genero" id="others" value="Outros"/>
                                     <FormRadioLabel for="others">Outros</FormRadioLabel>
                             </RadioWrapper>
                             
@@ -62,9 +62,8 @@ const FormRegister = (props) => {
                             {props.time}
 
                             {props.terapeutica}
-                            <FormLabel for="passwd">Senha</FormLabel>    
-
-                            <FormInput id="passwd" name="passwd" type="password"/>
+                            <FormLabel for="password">Senha</FormLabel>    
+                            <FormInput id="password" onChange={props.onChangePassword} name="senha" type="password" value={props.vlPassword}/>
 
                             <Button className="submit btn" type="submit">
                                 CONFIRMAR

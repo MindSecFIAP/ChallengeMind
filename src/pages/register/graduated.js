@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../components/NavBar'
 import Mind from "../../assets/img/Mind.svg"
 import { ImgLogo } from '../../components/NavBar/NavBarElements'
@@ -11,30 +11,64 @@ import {RadioWrapper,
         SelectWrapper,
         FormSelect,
         SelectOption} from '../../components/FormRegister/FormRegElements'
+import axios from 'axios'
 
 const RegisterGraduated = () => {
+
+    const [dados, setDados] = useState({
+        nome: "",
+        crp:"",
+        cpf:"",
+        telefone: "",
+        email: "",
+        dataNascimento: "",
+        genero: "",
+        tempoConversa:"",
+        linhaTerapeutica:"",
+        senha: "",
+    })
+
+    const handleChange = (e) => {
+        setDados({ ...dados, [e.target.name]: e.target.value });
+        console.log(dados)
+      };
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        axios
+          .post("/cadastro", dados)
+    
+          .then(() => {
+            window.location ="/"
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      };
+
+
     return (
         <>
-            <NavBar return="/" img={<ImgLogo class="logo" src={Mind} alt="Logo Mind"/>}/>
+            <NavBar return="/" img={<ImgLogo className="logo" src={Mind} alt="Logo Mind"/>}/>
             <FormRegister
                 title="de Psicólogo Formado"
 
                 lblCrp={<FormLabel for="crp">CRP</FormLabel>}
-                crp={<FormInput id="crp" name="CRP" type="number"/>}
+                crp={<FormInput id="crp" name="crp" type="number" value={dados.crp} onChange={handleChange}/>}
                               
                 lblCpf={<FormLabel for="cpf">CPF (Somente Números)</FormLabel>}
-                cpf={<FormInput id="cpf" name="CPF" type="number"/>}
+                cpf={<FormInput id="cpf" name="cpf" type="number" value={dados.cpf} onChange={handleChange}/>}
 
                 lblTime={<FormLabel>Tempo de conversa</FormLabel>}
                 time={
-                    <RadioWrapper>
-                        <FormRadio  type="radio" name="time" id="thirty" value="30" />
+                    <RadioWrapper onChange={handleChange}>
+                        <FormRadio  type="radio" name="tempoConversa" id="thirty" value="30" />
                         <FormRadioLabel for="thirty">Conversa de 30min</FormRadioLabel>
 
-                        <FormRadio type="radio" name="time" id="fourtyfive" value="45" />
+                        <FormRadio type="radio" name="tempoConversa" id="fourtyfive" value="45" />
                         <FormRadioLabel for="fourtyfive">Conversa de 45min</FormRadioLabel>
 
-                        <FormRadio type="radio" name="time" id="sixty" value="60" />
+                        <FormRadio type="radio" name="tempoConversa" id="sixty" value="60" />
                         <FormRadioLabel for="sixty">Conversa de 60min</FormRadioLabel>
                     </RadioWrapper>
                 }
@@ -42,7 +76,7 @@ const RegisterGraduated = () => {
                 terapeutica={
                     <SelectWrapper>
                       <FormLabel for="types">Linha terapêutica</FormLabel>
-                      <FormSelect name="type" id="types">
+                      <FormSelect name="linhaTerapeutica" id="types" onChange={handleChange}>
                         <SelectOption value="" disabled selected>
                             Selecione
                         </SelectOption>
@@ -74,6 +108,14 @@ const RegisterGraduated = () => {
                       </FormSelect>
                     </SelectWrapper>
                   }
+
+                  submit={handleSubmit}
+                  onChangeName={handleChange} vlName={dados.nome}
+                  onChangeCell={handleChange} vlCell={dados.telefone}
+                  onChangeEmail={handleChange} vlEmail={dados.email}
+                  onChangeNascimento={handleChange} vlDate={dados.dataNascimento}
+                  onChangeGender={handleChange} 
+                  onChangePassword={handleChange} vlPassword={dados.senha}
 
                 />
         </>
