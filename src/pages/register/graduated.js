@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavBar from '../../components/NavBar'
 import Mind from "../../assets/img/Mind.svg"
 import { ImgLogo } from '../../components/NavBar/NavBarElements'
@@ -11,8 +11,17 @@ import {RadioWrapper,
         SelectWrapper,
         FormSelect,
         SelectOption} from '../../components/FormRegister/FormRegElements'
+import axios from 'axios'
 
 const RegisterGraduated = () => {
+
+    useEffect(()=>{
+        axios.get("/cadastro").then((response) => {
+            console.log(response.data);
+          });
+    },[])  
+
+
     return (
         <>
             <NavBar return="/" img={<ImgLogo class="logo" src={Mind} alt="Logo Mind"/>}/>
