@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import NavBar from '../../components/NavBar'
 import Mind from "../../assets/img/Mind.svg"
 import { ImgLogo } from '../../components/NavBar/NavBarElements'
@@ -30,7 +30,6 @@ const RegisterGraduated = () => {
 
     const handleChange = (e) => {
         setDados({ ...dados, [e.target.name]: e.target.value });
-        console.log(dados)
       };
 
       const handleSubmit = (e) => {

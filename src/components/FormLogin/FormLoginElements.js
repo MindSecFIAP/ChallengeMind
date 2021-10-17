@@ -74,6 +74,41 @@ export const ButtonContainer = styled.div`
     }
 `
 
+export const Linker = styled.div`
+    a{
+        font-size: 1.2rem;
+    padding: .8rem 1.2rem;
+    width: 30%;
+    min-width: 150px;
+    text-align: center;
+    margin-top: 2vh;
+    border-radius: 4px;
+
+    background-color: ${Color.darkblue};
+    color: ${Color.white};
+
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: block;
+
+    &:focus, &:hover {
+        background-color: ${Color.blue};
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 500px){
+        width: 45%;
+        min-width: 0px;
+        font-size: 1rem;
+    }
+    @media screen and (max-width: 360px) {
+        width: 100%;
+    }
+    }
+`
+
 export const Button = styled.a`
     font-size: 1.2rem;
     padding: .8rem 1.2rem;

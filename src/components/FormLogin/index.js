@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 import Logo from "../../assets/img/Mind.svg"
 import Escolha from "../../assets/img/escolha.svg";
 import EscolhaDark from "../../assets/img/escolhaDark.svg";
@@ -12,6 +13,7 @@ import {
   ButtonContainer,
   Button,
   ImgLogo,
+  Linker,
 } from './FormLoginElements'
 
 import{
@@ -20,7 +22,8 @@ import{
   ModalButton,
 } from '../Modal/ModalElements'
 
-const FormLogin = () => {
+
+const FormLogin = (props) => {
     const [buttonPopup, setButtonPopup] = useState(false);
     const [buttonPopupVoluntary, setButtonPopupVoluntary] = useState(false);
     return (
@@ -29,19 +32,21 @@ const FormLogin = () => {
                 <FormContent>
                     <ImgLogo src={Logo}/>
                     <FormLabel for='email'>Email</FormLabel>
-                    <FormInput id='email' type='email' name="email" required/>
+                    <FormInput id='email' type='email' name="email" value={props.vlEmail} onChange={props.onChangeEmail}required/>
 
                     <FormLabel for='password'>Senha</FormLabel>
-                    <FormInput id='password' type='password' name="password" required/>
+                    <FormInput id='password' type='password' name="senha" value={props.vlSenha} onChange={props.onChangePassword} required/>
 
                     <ButtonContainer> 
                         <Button href="#" onClick={() => setButtonPopup(true)}>
                         Cadastrar
                         </Button>
 
-                        <Button type="button" onclick="check(this.form)" value="Login">
-                        Login
-                        </Button>
+                        <Linker>
+                          <Link to={props.login} onClick={props.click} >
+                            Login
+                          </Link>
+                        </Linker>
                     </ButtonContainer>
                 </FormContent>
             </FormWrapper>
