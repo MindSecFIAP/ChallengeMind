@@ -1,236 +1,315 @@
+import Avatar00 from "../../assets/avatar/avatar-00.svg"
+import Avatar01 from "../../assets/avatar/avatar-01.svg"
+import Avatar02 from "../../assets/avatar/avatar-02.svg"
+import Avatar03 from "../../assets/avatar/avatar-03.svg"
+import Avatar04 from "../../assets/avatar/avatar-04.svg"
+import Avatar05 from "../../assets/avatar/avatar-05.svg"
+import Avatar06 from "../../assets/avatar/avatar-06.svg"
+import Avatar07 from "../../assets/avatar/avatar-07.svg"
+import Avatar08 from "../../assets/avatar/avatar-08.svg"
+import Avatar09 from "../../assets/avatar/avatar-09.svg"
+import Avatar10 from "../../assets/avatar/avatar-10.svg"
+import Avatar11 from "../../assets/avatar/avatar-11.svg"
+import Avatar12 from "../../assets/avatar/avatar-12.svg"
+import Avatar13 from "../../assets/avatar/avatar-13.svg"
+import Avatar14 from "../../assets/avatar/avatar-14.svg"
+import Avatar15 from "../../assets/avatar/avatar-15.svg"
+import Avatar16 from "../../assets/avatar/avatar-16.svg"
+import Avatar17 from "../../assets/avatar/avatar-17.svg"
+import Avatar18 from "../../assets/avatar/avatar-18.svg"
+import Avatar19 from "../../assets/avatar/avatar-19.svg"
+import Avatar20 from "../../assets/avatar/avatar-20.svg"
+import Avatar21 from "../../assets/avatar/avatar-21.svg"
+import Avatar22 from "../../assets/avatar/avatar-22.svg"
+import Avatar23 from "../../assets/avatar/avatar-23.svg"
+import Avatar24 from "../../assets/avatar/avatar-24.svg"
+import Avatar25 from "../../assets/avatar/avatar-25.svg"
+import Avatar26 from "../../assets/avatar/avatar-26.svg"
+import Avatar27 from "../../assets/avatar/avatar-27.svg"
+import Avatar28 from "../../assets/avatar/avatar-28.svg"
+import Avatar29 from "../../assets/avatar/avatar-29.svg"
+import Avatar30 from "../../assets/avatar/avatar-30.svg"
+import Avatar31 from "../../assets/avatar/avatar-31.svg"
+import Avatar32 from "../../assets/avatar/avatar-32.svg"
+import Avatar33 from "../../assets/avatar/avatar-33.svg"
+import Avatar34 from "../../assets/avatar/avatar-34.svg"
+import Avatar35 from "../../assets/avatar/avatar-35.svg"
+import Avatar36 from "../../assets/avatar/avatar-36.svg"
+import Avatar37 from "../../assets/avatar/avatar-37.svg"
+import Avatar38 from "../../assets/avatar/avatar-38.svg"
+import Avatar39 from "../../assets/avatar/avatar-39.svg"
+import Avatar40 from "../../assets/avatar/avatar-40.svg"
+import Avatar41 from "../../assets/avatar/avatar-41.svg"
+import Avatar42 from "../../assets/avatar/avatar-42.svg"
+import Avatar43 from "../../assets/avatar/avatar-43.svg"
+import Avatar44 from "../../assets/avatar/avatar-44.svg"
+import Avatar45 from "../../assets/avatar/avatar-45.svg"
+import Avatar46 from "../../assets/avatar/avatar-46.svg"
+import Avatar47 from "../../assets/avatar/avatar-47.svg"
+import Avatar48 from "../../assets/avatar/avatar-48.svg"
+import Avatar49 from "../../assets/avatar/avatar-49.svg"
+import Avatar50 from "../../assets/avatar/avatar-50.svg"
+import Avatar51 from "../../assets/avatar/avatar-51.svg"
+import Avatar52 from "../../assets/avatar/avatar-52.svg"
+import Avatar53 from "../../assets/avatar/avatar-53.svg"
+import Avatar54 from "../../assets/avatar/avatar-54.svg"
+import Avatar55 from "../../assets/avatar/avatar-55.svg"
+import Avatar56 from "../../assets/avatar/avatar-56.svg"
+import Avatar57 from "../../assets/avatar/avatar-57.svg"
+import Avatar58 from "../../assets/avatar/avatar-58.svg"
+import Avatar59 from "../../assets/avatar/avatar-59.svg"
+import Avatar60 from "../../assets/avatar/avatar-60.svg"
+import Avatar61 from "../../assets/avatar/avatar-61.svg"
+import Avatar62 from "../../assets/avatar/avatar-62.svg"
+import Avatar63 from "../../assets/avatar/avatar-63.svg"
+import Avatar64 from "../../assets/avatar/avatar-64.svg"
+import Avatar65 from "../../assets/avatar/avatar-65.svg"
+import Avatar66 from "../../assets/avatar/avatar-66.svg"
+import Avatar67 from "../../assets/avatar/avatar-67.svg"
+import Avatar68 from "../../assets/avatar/avatar-68.svg"
+import Avatar69 from "../../assets/avatar/avatar-69.svg"
+import Avatar70 from "../../assets/avatar/avatar-70.svg"
+import Avatar71 from "../../assets/avatar/avatar-71.svg"
+import Avatar72 from "../../assets/avatar/avatar-72.svg"
+import Avatar73 from "../../assets/avatar/avatar-73.svg"
+import Avatar74 from "../../assets/avatar/avatar-74.svg"
+import Avatar75 from "../../assets/avatar/avatar-75.svg"
+import Avatar76 from "../../assets/avatar/avatar-76.svg"
+import Avatar77 from "../../assets/avatar/avatar-77.svg"
+
 export const SliderData = [
     {
-        image: require("../../assets/avatar/avatar (1).svg").default
+        image: Avatar00
     },
     {
-        image: require("../../assets/avatar/avatar (2).svg").default
+        image: Avatar01
     },
     {
-        image: require("../../assets/avatar/avatar (3).svg").default
+        image: Avatar02
     },
     {
-        image: require("../../assets/avatar/avatar (4).svg").default
+        image: Avatar03
     },
     {
-        image: require("../../assets/avatar/avatar (5).svg").default
+        image: Avatar04
     },
     {
-        image: require("../../assets/avatar/avatar (6).svg").default
+        image: Avatar05
     },
     {
-        image: require("../../assets/avatar/avatar (7).svg").default
+        image: Avatar06
     },
     {
-        image: require("../../assets/avatar/avatar (8).svg").default
+        image: Avatar07
     },
     {
-        image: require("../../assets/avatar/avatar (9).svg").default
+        image: Avatar08
     },
     {
-        image: require("../../assets/avatar/avatar (10).svg").default
+        image: Avatar09
     },
     {
-        image: require("../../assets/avatar/avatar (11).svg").default
+        image: Avatar10
     },
     {
-        image: require("../../assets/avatar/avatar (12).svg").default
+        image: Avatar11
     },
     {
-        image: require("../../assets/avatar/avatar (13).svg").default
+        image: Avatar12
     },
     {
-        image: require("../../assets/avatar/avatar (14).svg").default
+        image: Avatar13
     },
     {
-        image: require("../../assets/avatar/avatar (15).svg").default
+        image: Avatar14
     },
     {
-        image: require("../../assets/avatar/avatar (16).svg").default
+        image: Avatar15
     },
     {
-        image: require("../../assets/avatar/avatar (17).svg").default
+        image: Avatar16
     },
     {
-        image: require("../../assets/avatar/avatar (18).svg").default
+        image: Avatar17
     },
     {
-        image: require("../../assets/avatar/avatar (19).svg").default
+        image: Avatar18
     },
     {
-        image: require("../../assets/avatar/avatar (20).svg").default
+        image: Avatar19
     },
     {
-        image: require("../../assets/avatar/avatar (21).svg").default
+        image: Avatar20
     },
     {
-        image: require("../../assets/avatar/avatar (22).svg").default
+        image: Avatar21
     },
     {
-        image: require("../../assets/avatar/avatar (23).svg").default
+        image: Avatar22
     },
     {
-        image: require("../../assets/avatar/avatar (24).svg").default
+        image: Avatar23
     },
     {
-        image: require("../../assets/avatar/avatar (25).svg").default
+        image: Avatar24
     },
     {
-        image: require("../../assets/avatar/avatar (26).svg").default
+        image: Avatar25
     },
     {
-        image: require("../../assets/avatar/avatar (27).svg").default
+        image: Avatar26
     },
     {
-        image: require("../../assets/avatar/avatar (28).svg").default
+        image: Avatar27
     },
     {
-        image: require("../../assets/avatar/avatar (29).svg").default
+        image: Avatar28
     },
     {
-        image: require("../../assets/avatar/avatar (30).svg").default
+        image: Avatar29
     },
     {
-        image: require("../../assets/avatar/avatar (31).svg").default
+        image: Avatar30
     },
     {
-        image: require("../../assets/avatar/avatar (32).svg").default
+        image: Avatar31
     },
     {
-        image: require("../../assets/avatar/avatar (33).svg").default
+        image: Avatar32
     },
     {
-        image: require("../../assets/avatar/avatar (34).svg").default
+        image: Avatar33
     },
     {
-        image: require("../../assets/avatar/avatar (35).svg").default
+        image: Avatar34
     },
     {
-        image: require("../../assets/avatar/avatar (36).svg").default
+        image: Avatar35
     },
     {
-        image: require("../../assets/avatar/avatar (37).svg").default
+        image: Avatar36
     },
     {
-        image: require("../../assets/avatar/avatar (38).svg").default
+        image: Avatar37
     },
     {
-        image: require("../../assets/avatar/avatar (39).svg").default
+        image: Avatar38
     },
     {
-        image: require("../../assets/avatar/avatar (40).svg").default
+        image: Avatar39
     },
     {
-        image: require("../../assets/avatar/avatar (41).svg").default
+        image: Avatar40
     },
     {
-        image: require("../../assets/avatar/avatar (42).svg").default
+        image: Avatar41
     },
     {
-        image: require("../../assets/avatar/avatar (43).svg").default
+        image: Avatar42
     },
     {
-        image: require("../../assets/avatar/avatar (44).svg").default
-    },
+        image: Avatar43
+    },    
     {
-        image: require("../../assets/avatar/avatar (45).svg").default
-    },
+        image: Avatar44
+    },    
     {
-        image: require("../../assets/avatar/avatar (46).svg").default
-    },
+        image: Avatar45
+    },    
     {
-        image: require("../../assets/avatar/avatar (47).svg").default
-    },
+        image: Avatar46
+    },    
     {
-        image: require("../../assets/avatar/avatar (48).svg").default
-    },
+        image: Avatar47
+    },    
     {
-        image: require("../../assets/avatar/avatar (49).svg").default
-    },
+        image: Avatar48
+    },    
     {
-        image: require("../../assets/avatar/avatar (50).svg").default
-    },
+        image: Avatar49
+    },    
     {
-        image: require("../../assets/avatar/avatar (51).svg").default
-    },
+        image: Avatar50
+    },    
     {
-        image: require("../../assets/avatar/avatar (52).svg").default
-    },
+        image: Avatar51
+    },    
     {
-        image: require("../../assets/avatar/avatar (53).svg").default
-    },
+        image: Avatar52
+    },    
     {
-        image: require("../../assets/avatar/avatar (54).svg").default
-    },
+        image: Avatar53
+    },    
     {
-        image: require("../../assets/avatar/avatar (55).svg").default
-    },
+        image: Avatar54
+    },    
     {
-        image: require("../../assets/avatar/avatar (56).svg").default
-    },
+        image: Avatar55
+    },    
     {
-        image: require("../../assets/avatar/avatar (57).svg").default
-    },
+        image: Avatar56
+    },    
     {
-        image: require("../../assets/avatar/avatar (58).svg").default
-    },
+        image: Avatar57
+    },    
     {
-        image: require("../../assets/avatar/avatar (59).svg").default
-    },
+        image: Avatar58
+    },    
     {
-        image: require("../../assets/avatar/avatar (60).svg").default
-    },
+        image: Avatar59
+    },    
     {
-        image: require("../../assets/avatar/avatar (61).svg").default
-    },
+        image: Avatar60
+    },    
     {
-        image: require("../../assets/avatar/avatar (62).svg").default
-    },
+        image: Avatar61
+    },    
     {
-        image: require("../../assets/avatar/avatar (63).svg").default
-    },
+        image: Avatar62
+    },    
     {
-        image: require("../../assets/avatar/avatar (64).svg").default
-    },
+        image: Avatar63
+    },    
     {
-        image: require("../../assets/avatar/avatar (65).svg").default
-    },
+        image: Avatar64
+    },    
     {
-        image: require("../../assets/avatar/avatar (66).svg").default
-    },
+        image: Avatar65
+    },    
     {
-        image: require("../../assets/avatar/avatar (67).svg").default
-    },
+        image: Avatar66
+    },    
     {
-        image: require("../../assets/avatar/avatar (68).svg").default
-    },
+        image: Avatar67
+    },    
     {
-        image: require("../../assets/avatar/avatar (69).svg").default
-    },
+        image: Avatar68
+    },    
     {
-        image: require("../../assets/avatar/avatar (70).svg").default
-    },
+        image: Avatar69
+    },    
     {
-        image: require("../../assets/avatar/avatar (71).svg").default
-    },
+        image: Avatar70
+    },    
     {
-        image: require("../../assets/avatar/avatar (72).svg").default
-    },
+        image: Avatar71
+    },    
     {
-        image: require("../../assets/avatar/avatar (73).svg").default
-    },
+        image: Avatar72
+    },    
     {
-        image: require("../../assets/avatar/avatar (74).svg").default
-    },
+        image: Avatar73
+    },    
     {
-        image: require("../../assets/avatar/avatar (75).svg").default
-    },
+        image: Avatar74
+    },    
     {
-        image: require("../../assets/avatar/avatar (76).svg").default
-    },
+        image: Avatar75
+    },    
     {
-        image: require("../../assets/avatar/avatar (77).svg").default
-    },
+        image: Avatar76
+    },    
     {
-        image: require("../../assets/avatar/avatar (78).svg").default
-    }
+        image: Avatar77
+    } 
 ]

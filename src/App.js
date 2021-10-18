@@ -1,14 +1,13 @@
 import { Route, Switch } from 'react-router-dom'
 
 import LoginPage from "./pages/index.js";
-import RegisterUser from "./pages/register/user.js";
-import RegisterGraduated from './pages/register/graduated.js';
-import RegisterIntern from './pages/register/intern.js';
-import ChatUser from './pages/chat/user.js';
-import ChatPsi from './pages/chat/psi.js';
-import PsiProfile from './pages/profile/psi.js';
-// import { ChatBot } from './pages/chats/ChatBot';
-
+import RegisterUser from "./pages/register/User.js";
+import RegisterGraduated from './pages/register/Graduated.js';
+import RegisterIntern from './pages/register/Intern.js';
+import ChatUser from './pages/chat/User.js';
+import ChatPsi from './pages/chat/Psi.js';
+import PsiProfile from './pages/profile/Psi.js';
+import Error from './pages/error.js';
 import "./App.css";
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
           <Route path="/profile" exact component={PsiProfile} />
           <Route path="/login" exact component={LoginPage} />
           <Route path="/" exact component={LoginPage} />
-          <Route path="/" component={LoginPage} />
+          <Route path="/404" component={Error} />
         </Switch>
     </>
   );

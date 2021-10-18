@@ -13,7 +13,7 @@ import {SideBarWrapper,
         ItemWrapper,
         InputWrapper} from '../../components/SideBar/SideBarElements'
 import {UserData} from '../../components/SideBar/UserData'
-import {Modal} from '../../components/Modal/';
+import {Modal} from '../../components/Modal';
 import {ModalH2,
         ModalContent,
         InfoWrapper,
