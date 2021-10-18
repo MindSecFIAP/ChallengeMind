@@ -31,7 +31,7 @@ const ImageSlider = ({slides}) => {
             {SliderData.map((slide, index) => {
                 return  (
                     <AvatarContainer className={index === current ? 'slide active' : 'slide'} key={index}>
-                        {index === current && (<Avatar src={slide.image} alt={"Avatar "+index}/>)}
+                        {index === current && (<Avatar src={slide} alt={"Avatar "+index}/>)}
                     </AvatarContainer>
                 )})}
         </Slider>

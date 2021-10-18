@@ -7,7 +7,7 @@ import RegisterIntern from './pages/register/Intern.js';
 import ChatUser from './pages/chat/User.js';
 import ChatPsi from './pages/chat/Psi.js';
 import PsiProfile from './pages/profile/Psi.js';
-import Error from './pages/error.js';
+// import Error from './pages/error.js';
 import "./App.css";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
           <Route path="/profile" exact component={PsiProfile} />
           <Route path="/login" exact component={LoginPage} />
           <Route path="/" exact component={LoginPage} />
-          <Route path="/404" component={Error} />
+          {/* <Route path="/404" component={Error} /> */}
         </Switch>
     </>
   );
