@@ -21,9 +21,8 @@ function App() {
           <Route path="/chatUser" exact component={ChatUser} />
           <Route path="/chatPsi" exact component={ChatPsi} />
           <Route path="/profile" exact component={PsiProfile} />
-          {/* 
-          <Route path="/chatBot" exact component={ChatBot} />
-          */}
+          <Route path="/login" exact component={LoginPage} />
+          <Route path="/" exact component={LoginPage} />
           <Route path="/" component={LoginPage} />
         </Switch>
     </>
