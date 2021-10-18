@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Color} from "../global/color";
+import {Color} from "../Global/Color";
 
 export const NavContainer = styled.nav`
     position: fixed;

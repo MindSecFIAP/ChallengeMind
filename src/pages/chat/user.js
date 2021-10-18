@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from "styled-components";
 import Chat from '../../components/Chat'
 import SideBar from '../../components/SideBar'
-import {RatingData} from '../../components/global/RatingData'
+import {RatingData} from '../../components/Global/RatingData'
 import {SideBarWrapper,
         SideBarInput,
         ChatWrapper,
