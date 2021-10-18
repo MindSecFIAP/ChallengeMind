@@ -16,7 +16,7 @@ import {ChatContainer,
         ChatSubmit,
         FlagIcon,
         SubmitIcon} from './ChatElements'
-import ImgAvatar from "../../assets/avatar/avatar (33).svg";
+import ImgAvatar from "../../assets/avatar/avatar-33.svg";
 import {Modal} from '../Modal';
 import {ModalH2,
         ModalButton,

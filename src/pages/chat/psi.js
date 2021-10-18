@@ -17,7 +17,7 @@ import {SideBarWrapper,
         ReviewRate,
         ReviewText,
         ReviewUser} from '../../components/SideBar/SideBarElements'
-import ImgAvatar from "../../assets/avatar/avatar (29).svg";
+import ImgAvatar from "../../assets/avatar/avatar-29.svg";
 import {SideBarButton} from '../../components/SideBar/SideBarElements'
 import {CloseButton, Icon} from '../../components/Modal/ModalElements'
 import {OpenIcon} from '../../components/Chat/ChatElements'

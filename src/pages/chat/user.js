@@ -28,7 +28,7 @@ import {ModalH2,
 import {RiMessage3Fill,
         RiStarSmileFill,
         RiTimeFill } from 'react-icons/ri';
-import ImgAvatar from "../../assets/avatar/avatar (33).svg";
+import ImgAvatar from "../../assets/avatar/avatar-33.svg";
 
 const Container = styled.div`
     display: flex;
