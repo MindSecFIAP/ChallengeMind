@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from "styled-components";
 import Chat from '../../components/Chat'
 import SideBar from '../../components/SideBar'
@@ -21,7 +21,6 @@ const Container = styled.div`
 `
 
 const ChatUser = () => {
-    const [profile, setProfile] = useState(false);
     return (
         <>
             <Container>
@@ -31,13 +30,13 @@ const ChatUser = () => {
                     </InputWrapper>
                     <SideBarWrapper>
                         <ChatWrapper>                          
-                            <ChatItem isOpen={false}>
-                                <Avatar src={ImgAvatar}/>
-                                <ItemWrapper>
-                                    <Name>MindBot</Name>
-                                    <Message>Digite Ajuda caso necessite de um profissional</Message>
-                                    </ItemWrapper>
-                            </ChatItem>
+                                <ChatItem isOpen={false}>
+                                    <Avatar src={ImgAvatar}/>
+                                    <ItemWrapper>
+                                        <Name>MindBot</Name>
+                                        <Message>Digite Ajuda caso necessite de um profissional</Message>
+                                        </ItemWrapper>
+                                </ChatItem>
                             {UserData.map((data) => {
                             return (
                                 <ChatItem isOpen={false}>

@@ -24,11 +24,22 @@ import {ModalH2,
         RatingName,
         RatingQuantity,
         InfoSection,
-        ModalAvatar} from '../../components/Modal/ModalElements';
+        ModalAvatar,
+        RateGroup,
+        RateCheck,
+        CheckLabel,
+        CheckImg} from '../../components/Modal/ModalElements';
 import {RiMessage3Fill,
         RiStarSmileFill,
         RiTimeFill } from 'react-icons/ri';
 import ImgAvatar from "../../assets/avatar/avatar-33.svg";
+import RatingModal from '../../components/Rating/RatingModal'
+import Amigavel from '../../assets/elogios/elogio_amigavel.svg'
+import Atencioso from '../../assets/elogios/elogio_atencioso.svg'
+import Confiavel from '../../assets/elogios/elogio_confiavel.svg'
+import Focado from '../../assets/elogios/elogio_focado.svg'
+import Motivacional from '../../assets/elogios/elogio_motivacional.svg'
+import Sabio from '../../assets/elogios/elogio_sabio.svg'
 
 const Container = styled.div`
     display: flex;
@@ -38,6 +49,7 @@ const Container = styled.div`
 
 const ChatUser = () => {
     const [profile, setProfile] = useState(false);
+    
     return (
         <>
             <Container>
@@ -63,7 +75,7 @@ const ChatUser = () => {
 
                 <Chat imgavatar={ImgAvatar} username="Carina" open={() => setProfile(true)}/>
 
-                <Modal trigger={profile} setTrigger={() => setProfile(false)}>
+            <Modal trigger={profile} setTrigger={() => setProfile(false)}>
                 <ModalContent>
                     <ModalH2>Perfil da Carina</ModalH2>
                     <InfoSection>
@@ -86,6 +98,35 @@ const ChatUser = () => {
                     </RatingWrapper>
                 </ModalContent>
             </Modal>
+
+            <RatingModal imgavatar={ImgAvatar} icon="star">
+                <RatingWrapper>
+                    <RateGroup>
+                        <RateCheck id="amigavel" name="amigavel" value="amigavel" type="checkbox"/>
+                        <CheckLabel for="amigavel"><CheckImg src={Amigavel}/>Amigável</CheckLabel>
+                    </RateGroup>
+                    <RateGroup>
+                        <RateCheck id="atencioso" name="atencioso" value="atencioso" type="checkbox"/>
+                        <CheckLabel for="atencioso"><CheckImg src={Atencioso}/>Atencioso</CheckLabel>
+                    </RateGroup>
+                    <RateGroup>
+                        <RateCheck id="confiavel" name="confiavel" value="confiavel" type="checkbox"/>
+                        <CheckLabel for="confiavel"><CheckImg src={Confiavel}/>Confiável</CheckLabel>
+                    </RateGroup>
+                    <RateGroup>
+                        <RateCheck id="focado" name="focado" value="focado" type="checkbox"/>
+                        <CheckLabel for="focado"><CheckImg src={Focado}/>Focado</CheckLabel>
+                    </RateGroup>
+                    <RateGroup>
+                        <RateCheck id="motivacional" name="motivacional" value="motivacional" type="checkbox"/>
+                        <CheckLabel for="motivacional"><CheckImg src={Motivacional}/>Motivacional</CheckLabel>
+                    </RateGroup>
+                    <RateGroup>
+                        <RateCheck id="sabio" name="sabio" value="sabio" type="checkbox"/>
+                        <CheckLabel for="sabio"><CheckImg src={Sabio}/>Sábio</CheckLabel>
+                    </RateGroup>
+                </RatingWrapper>
+            </RatingModal>
             </Container>
         </>
     )

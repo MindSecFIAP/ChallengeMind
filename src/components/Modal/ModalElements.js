@@ -138,6 +138,7 @@ export const Info = styled.p`
     }
 `
 
+// Modal de Avaliação
 export const RatingWrapper = styled.div`
     display:grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -153,6 +154,9 @@ export const Rating = styled.div`
 
 export const RatingImg = styled.img`
     width: 75px;
+    
+    border: ${({active}) => (active ? "4px solid #000" : "4px solid ${Color.gray}")};
+    border-radius: 8px;
 `
 
 export const RatingName = styled.p`
@@ -170,4 +174,67 @@ export const RatingQuantity = styled.p`
 
 export const ModalAvatar = styled(Avatar)`
     height: 125px;;
+`
+
+export const RatingButton = styled.button`
+    border-style: none;
+    font-size: 1.2rem;
+    padding: .8rem 1.2rem;
+    width: 100%;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 4px;
+
+    background-color: ${Color.darkblue};
+    color: ${Color.white};
+
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: block;
+
+    &:focus, &:hover {
+        background-color: ${Color.blue};
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    margin-top: 16px;
+`
+export const RatingForm = styled.form`
+
+`
+export const RateGroup = styled.div`
+
+`
+
+export const RateCheck = styled.input`
+    display: none;
+`
+
+export const CheckLabel = styled.label`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+`
+
+export const CheckImg = styled(RatingImg)`
+    margin-bottom: 4px;	
+    transition: 0.2s;
+    ${RateCheck}:checked + ${CheckLabel} &{
+        border: 4px solid ${Color.darkyellow};
+    }
+    
+    ${RateCheck}:hover + &{
+        border: 2px solid ${Color.darkyellow};
+    }
+`
+
+export const RateTextArea = styled(ModalTextArea)`
+    height: 100%;
+`
+
+export const RateLabel = styled.label`
+    font-size: 14px;
 `

@@ -16,12 +16,12 @@ import {SideBarWrapper,
         ReviewName,
         ReviewRate,
         ReviewText,
-        ReviewUser} from '../../components/SideBar/SideBarElements'
+        ReviewUser,} from '../../components/SideBar/SideBarElements'
 import ImgAvatar from "../../assets/avatar/avatar-29.svg";
 import {SideBarButton} from '../../components/SideBar/SideBarElements'
-import {CloseButton, Icon} from '../../components/Modal/ModalElements'
+import {CloseButton, Icon, RateTextArea, RateLabel} from '../../components/Modal/ModalElements'
+import RatingModal from '../../components/Rating/RatingModal'
 import {OpenIcon} from '../../components/Chat/ChatElements'
-
 const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -68,6 +68,16 @@ const ChatPsi = () => {
                     </SideBarWrapper>
                 </SideBar>
                 <Chat openIcon={<OpenIcon onClick={toggle}/>} />
+
+                <RatingModal imgavatar={ImgAvatar} icon="alert">
+                    <RateTextArea 
+                        name="textRate"  
+                        id="rateUser" 
+                        rows="15"
+                        maxlength="50"
+                        placeholder="Digite aqui um resumo do que foi conversado"
+                    />
+                </RatingModal>
             </Container>
         </>
     )
