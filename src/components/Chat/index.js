@@ -35,8 +35,8 @@ const Chat = (props) => {
                 <ChatNav>
                     {props.openIcon}
                     <NavWrapper>
-                        <Avatar src={ImgAvatar} onClick={props.open}/>
-                        <Name onClick={props.open}>Carina</Name>
+                        <Avatar src={props.imgavatar} onClick={props.open}/>
+                        <Name onClick={props.open}>{props.username}</Name>
                     </NavWrapper>
                     <FlagIcon onClick={() => setReport(true)}>
                         <FaFlag/>

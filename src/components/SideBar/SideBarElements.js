@@ -53,7 +53,9 @@ export const SideBarWrapper = styled.div`
 export const InputWrapper = styled.div`
     padding: 16px;
     position: sticky;
-    height: 9%;
+    -webkit-box-shadow: 1px 6px 10px -2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 6px 10px -2px rgba(0,0,0,0.2);
+    box-shadow: 1px 6px 10px -2px rgba(0,0,0,0.2);
 `;
 
 export const SideBarInput = styled(FormInput)`
@@ -68,12 +70,12 @@ export const ChatWrapper = styled.div`
 `;
 
 export const ChatItem = styled.div`
-    height: 10vh;
+    height: 75px;
     padding: 16px;
     border-top: 1px solid ${Color.bluegray};
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
     background-color: ${({isOpen}) => (isOpen ? "rgba(125, 136, 160,0.2)" : "")};
     transition: all 0.2s ease-in-out;

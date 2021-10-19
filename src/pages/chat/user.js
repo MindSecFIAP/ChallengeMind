@@ -61,7 +61,7 @@ const ChatUser = () => {
                     </SideBarWrapper>
                 </SideBar>
 
-                <Chat open={() => setProfile(true)}/>
+                <Chat imgavatar={ImgAvatar} username="Carina" open={() => setProfile(true)}/>
 
                 <Modal trigger={profile} setTrigger={() => setProfile(false)}>
                 <ModalContent>
