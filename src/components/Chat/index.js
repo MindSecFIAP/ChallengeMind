@@ -16,7 +16,6 @@ import {ChatContainer,
         ChatSubmit,
         FlagIcon,
         SubmitIcon} from './ChatElements'
-import ImgAvatar from "../../assets/avatar/avatar (33).svg";
 import {Modal} from '../Modal';
 import {ModalH2,
         ModalButton,
@@ -35,8 +34,8 @@ const Chat = (props) => {
                 <ChatNav>
                     {props.openIcon}
                     <NavWrapper>
-                        <Avatar src={ImgAvatar} onClick={props.open}/>
-                        <Name onClick={props.open}>Carina</Name>
+                        <Avatar src={props.imgavatar} onClick={props.open}/>
+                        <Name onClick={props.open}>{props.username}</Name>
                     </NavWrapper>
                     <FlagIcon onClick={() => setReport(true)}>
                         <FaFlag/>
@@ -71,7 +70,7 @@ const Chat = (props) => {
                                 name="report"
                                 id="report"
                                 rows="15"
-                            ></ModalTextArea>
+                            />
                             <ModalButton>
                                 {" "}
                                     Reportar!

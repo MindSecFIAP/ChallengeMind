@@ -6,7 +6,7 @@ import Supervisao from "../../assets/img/supervisao.svg"
 
 import {ImgLogo} from '../../components/NavBar/NavBarElements'
 import {RatingData} from '../../components/Global/RatingData'
-import ImgAvatar from "../../assets/avatar/avatar (33).svg";
+import ImgAvatar from "../../assets/avatar/avatar-33.svg";
 import {RiTimeFill,
         RiMessage3Fill,
         RiStarSmileFill} from 'react-icons/ri'
