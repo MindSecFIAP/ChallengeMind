@@ -5,7 +5,7 @@ import Conversa from "../../assets/img/conversa.svg"
 import Supervisao from "../../assets/img/supervisao.svg"
 
 import {ImgLogo} from '../../components/NavBar/NavBarElements'
-import {RatingData} from '../../components/Global/RatingData'
+import {RatingData} from '../../components/global/RatingData'
 import ImgAvatar from "../../assets/avatar/avatar-33.svg";
 import {RiTimeFill,
         RiMessage3Fill,
@@ -26,7 +26,7 @@ import {ProfileContainer,
         ButtonsWrapper,
         ImgButton,
         Button,
-        ButtonText} from '../../components/Global/ProfileElements'
+        ButtonText} from '../../components/global/ProfileElements'
 
 const PsiProfile = () => {
     return (

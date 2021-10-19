@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {FormInput} from "../Global/Form"
+import {FormInput} from "../global/Form"
 import {RiSendPlane2Fill} from 'react-icons/ri'
-import {Color} from "../Global/Color"
+import {Color} from "../global/Color"
 import Background from "../../assets/img/background-img.svg"
 import {MdChevronRight} from 'react-icons/md'
 

@@ -9,7 +9,7 @@ import {Container,
         FormRadio,
         FormH1} from './FormRegElements'
 import {FormInput,
-        FormLabel} from '../Global/Form'
+        FormLabel} from '../global/Form'
 import ImageSlider from '../../components/ImageSlider'
 import { SliderData } from '../../components/ImageSlider/SliderData.js'
 
