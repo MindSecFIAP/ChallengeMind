@@ -67,7 +67,7 @@ const ChatPsi = () => {
                             )})}
                     </SideBarWrapper>
                 </SideBar>
-                <Chat openIcon={<OpenIcon onClick={toggle}/>} />
+                <Chat imgavatar={ImgAvatar} username="José" openIcon={<OpenIcon onClick={toggle}/>} />
 
                 <RatingModal imgavatar={ImgAvatar} icon="alert">
                     <RateTextArea 

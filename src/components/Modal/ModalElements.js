@@ -17,6 +17,8 @@ export const ModalContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+
 `
 export const ModalWrapper = styled.div`
     background-color: ${Color.white};
@@ -24,6 +26,8 @@ export const ModalWrapper = styled.div`
     border-radius: 0.5rem;
     width: 90vw;
     max-width: 350px;
+    max-height: 90vh;
+    overflow-y: auto;
     position: relative;
     z-index: 1;
     
@@ -47,7 +51,7 @@ export const Icon = styled(IoMdCloseCircle)`
     &:hover{
         opacity: 1;
         cursor: pointer;
-    }
+}
 `
 export const CloseButton = styled.button`
     border: none;

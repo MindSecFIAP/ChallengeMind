@@ -11,7 +11,8 @@ import {SideBarWrapper,
         Name,
         Message,
         ItemWrapper,
-        InputWrapper} from '../../components/SideBar/SideBarElements'
+        InputWrapper,
+        SideBarButton} from '../../components/SideBar/SideBarElements'
 import {UserData} from '../../components/SideBar/UserData'
 import {Modal} from '../../components/Modal';
 import {ModalH2,
@@ -28,10 +29,13 @@ import {ModalH2,
         RateGroup,
         RateCheck,
         CheckLabel,
-        CheckImg} from '../../components/Modal/ModalElements';
+        CheckImg,
+        CloseButton,
+        Icon} from '../../components/Modal/ModalElements';
 import {RiMessage3Fill,
         RiStarSmileFill,
         RiTimeFill } from 'react-icons/ri';
+import {OpenIcon} from '../../components/Chat/ChatElements'
 import ImgAvatar from "../../assets/avatar/avatar-33.svg";
 import RatingModal from '../../components/Rating/RatingModal'
 import Amigavel from '../../assets/elogios/elogio_amigavel.svg'
@@ -49,11 +53,22 @@ const Container = styled.div`
 
 const ChatUser = () => {
     const [profile, setProfile] = useState(false);
-    
+
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <>
             <Container>
-                <SideBar>
+                <SideBar isOpen={isOpen}>
+                        <SideBarButton>
+                            <CloseButton>
+                                <Icon isWhite={true} onClick={toggle}/>
+                            </CloseButton>
+                        </SideBarButton>
                     <InputWrapper>
                         <SideBarInput/>
                     </InputWrapper>
@@ -73,7 +88,7 @@ const ChatUser = () => {
                     </SideBarWrapper>
                 </SideBar>
 
-                <Chat imgavatar={ImgAvatar} username="Carina" open={() => setProfile(true)}/>
+            <Chat imgavatar={ImgAvatar} username="Carina" open={() => setProfile(true)} openIcon={<OpenIcon onClick={toggle}/>}/>
 
             <Modal trigger={profile} setTrigger={() => setProfile(false)}>
                 <ModalContent>
