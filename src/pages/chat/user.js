@@ -34,7 +34,8 @@ import {ModalH2,
         Icon} from '../../components/Modal/ModalElements';
 import {RiMessage3Fill,
         RiStarSmileFill,
-        RiTimeFill } from 'react-icons/ri';
+        RiTimeFill } 
+        from 'react-icons/ri';
 import {OpenIcon} from '../../components/Chat/ChatElements'
 import ImgAvatar from "../../assets/avatar/avatar-33.svg";
 import RatingModal from '../../components/Rating/RatingModal'

@@ -8,7 +8,6 @@ import ChatBot from './pages/chat/Chatbot.js';
 import ChatUser from './pages/chat/User.js';
 import ChatPsi from './pages/chat/Psi.js';
 import PsiProfile from './pages/profile/Psi.js';
-// import Error from './pages/error.js';
 import "./App.css";
 
 function App() {

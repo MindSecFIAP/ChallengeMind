@@ -18,7 +18,6 @@ const RegisterUser = () => {
   const handleChange = (e) => {
     setDados({ ...dados, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
