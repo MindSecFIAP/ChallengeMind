@@ -28,10 +28,6 @@ import {ProfileContainer,
         Button,
         ButtonText} from '../../components/Global/ProfileElements'
 
-
-
-
-
 const PsiProfile = () => {
     return (
         <>

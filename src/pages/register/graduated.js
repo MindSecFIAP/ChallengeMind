@@ -14,7 +14,6 @@ import {RadioWrapper,
 import axios from 'axios'
 
 const RegisterGraduated = () => {
-
     const [dados, setDados] = useState({
         nome: "",
         crp:"",
