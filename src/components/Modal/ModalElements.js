@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Color} from '../global/Color'
+import {Color} from '../Global/Color'
 
 import {IoMdCloseCircle} from 'react-icons/io'
 import { Avatar } from "../Chat/ChatElements";

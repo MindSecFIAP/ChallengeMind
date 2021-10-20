@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {Color} from './Color'
-import Background from "../../assets/img/background-img.svg"
-import LightBackground from "../../assets/img/light_background.svg"
+import {Color} from './Color';
+import Background from "../../assets/img/background-img.svg";
+import LightBackground from "../../assets/img/light_background.svg";
 
 let pHeight = window.innerHeight
 

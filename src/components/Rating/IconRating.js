@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import {FaStar} from 'react-icons/fa'
 import {GoAlert} from 'react-icons/go'
-import {Color} from '../global/Color'
+import {Color} from '../Global/Color'
 
 const AllIcons = styled.span`
     font-size: 40px;
