@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Color} from './Color'
+import {Color} from './Color';
 
 export const FormLabel = styled.label`
     margin-bottom: 8px;

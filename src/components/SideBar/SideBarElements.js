@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Color} from '../Global/Color'
+import {Color} from '../Global/Color';
 import {FormInput} from '../Global/Form';
 import {GoAlert} from 'react-icons/go';
 
