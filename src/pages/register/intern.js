@@ -16,17 +16,18 @@ import axios from "axios";
 
 const RegisterIntern = () => {    
     const [dados, setDados] = useState({
-        nome: "",
-        rm:"",
-        nomeInstituicao:"",
-        cpf:"",
-        telefone: "",
-        email: "",
-        dataNascimento: "",
-        genero: "",
-        tempoConversa:"",
-        linhaTerapeutica:"",
-        senha: "",
+      nome: "",
+      rm:"",
+      nomeInstituicao:"",
+      cpf:"",
+      telefone: "",
+      email: "",
+      dataNascimento: null,
+      genero: "",
+      tempoConversa:"",
+      linhaTerapeutica:"",
+      senha: "",
+      crp:null
     })
 
     const handleChange = (e) => {
@@ -43,6 +44,7 @@ const RegisterIntern = () => {
           })
           .catch((e) => {
             console.log(e);
+            console.log(dados)
           });
       };
 
