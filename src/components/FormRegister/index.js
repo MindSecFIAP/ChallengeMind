@@ -48,13 +48,13 @@ const FormRegister = (props) => {
                             
                             <FormLabel>Gênero</FormLabel>        
                             <RadioWrapper onChange={props.onChangeGender}>
-                                    <FormRadio type="radio" name="genero" id="male" value="Masculino" />
+                                    <FormRadio type="radio" name="genero" id="male" value="M" />
                                     <FormRadioLabel for="male">Masculino</FormRadioLabel>
 
-                                    <FormRadio type="radio" name="genero" id="female" value="Feminino"/>
+                                    <FormRadio type="radio" name="genero" id="female" value="F"/>
                                     <FormRadioLabel for="female">Feminino</FormRadioLabel>
 
-                                    <FormRadio type="radio" name="genero" id="others" value="Outros"/>
+                                    <FormRadio type="radio" name="genero" id="others" value="O"/>
                                     <FormRadioLabel for="others">Outros</FormRadioLabel>
                             </RadioWrapper>
                             

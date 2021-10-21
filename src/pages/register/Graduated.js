@@ -16,15 +16,17 @@ import axios from 'axios'
 const RegisterGraduated = () => {
     const [dados, setDados] = useState({
         nome: "",
-        crp:"",
+        rm:null,
+        nomeInstituicao:null,
         cpf:"",
         telefone: "",
         email: "",
-        dataNascimento: "",
+        dataNascimento:null,
         genero: "",
         tempoConversa:"",
         linhaTerapeutica:"",
         senha: "",
+        crp:""  
     })
 
     const handleChange = (e) => {

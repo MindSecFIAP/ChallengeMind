@@ -8,11 +8,17 @@ import axios from "axios";
 const RegisterUser = () => {
   const [dados, setDados] = useState({
     nome: "",
+    rm:null,
+    nomeInstituicao:null,
+    cpf:null,
     telefone: "",
     email: "",
     dataNascimento: "",
     genero: "",
+    tempoConversa:null,
+    linhaTerapeutica:null,
     senha: "",
+    crp:null
   });
 
   const handleChange = (e) => {
@@ -28,6 +34,7 @@ const RegisterUser = () => {
       })
       .catch((e) => {
         console.log(e);
+        console.log(dados)
       });
   };
 
