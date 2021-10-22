@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Modal} from '../../components/Modal';
 import {ModalH2,
         ModalContent,
         RatingForm,
-        RatingWrapper,
         InfoSection,
         ModalAvatar,
         RatingButton

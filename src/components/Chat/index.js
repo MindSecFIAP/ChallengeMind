@@ -19,7 +19,6 @@ import {ChatContainer,
         SubmitIcon} from './ChatElements'
 import {Modal} from '../Modal';
 import {ModalH2,
-        ModalButton,
         ModalContent,
         ModalForm,
         FormWrapper,

@@ -51,7 +51,6 @@ const RegisterIntern = () => {
           })
           .catch((e) => {
             console.log(e);
-            console.log(dados)
           });
       };
 

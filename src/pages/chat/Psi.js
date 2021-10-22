@@ -19,7 +19,7 @@ import {SideBarWrapper,
         ReviewUser,} from '../../components/SideBar/SideBarElements'
 import ImgAvatar from "../../assets/avatar/avatar-29.svg";
 import {SideBarButton} from '../../components/SideBar/SideBarElements'
-import {CloseButton, Icon, RateTextArea, RateLabel} from '../../components/Modal/ModalElements'
+import {CloseButton, Icon, RateTextArea} from '../../components/Modal/ModalElements'
 import RatingModal from '../../components/Rating/RatingModal'
 import {OpenIcon} from '../../components/Chat/ChatElements'
 import axios from 'axios';
@@ -53,7 +53,6 @@ const ChatPsi = () => {
           })
           .catch((e) => {
             console.log(e);
-            console.log(attention)
           });
       };
 
