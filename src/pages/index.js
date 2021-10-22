@@ -33,7 +33,7 @@ const LoginPage = () => {
 
             if(user.email == validator.email && user.senha == validator.senha){
                 if(validator.crp == null && validator.rm == null){
-                    setRoute("/chatUser")
+                    setRoute("/chatBot")
                 }else{
                     setRoute("/chatPsi")
                 }

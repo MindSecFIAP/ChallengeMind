@@ -61,6 +61,19 @@ const ChatUser = () => {
         setIsOpen(!isOpen);
     }
 
+    const [rate, setRate] = useState(false)
+    const [final, setFinal] = useState("")
+
+    const handleChangePage = (e) => {
+        setFinal({value: e.target.value});
+    };
+
+    const changePage = (e) =>{
+        e.preventDefault()
+        final.value.toLowerCase() == "avaliar" ? setRate(true) : console.log("Digitou errado");
+        
+    }
+
     return (
         <>
             <Container>
@@ -89,7 +102,8 @@ const ChatUser = () => {
                     </SideBarWrapper>
                 </SideBar>
 
-            <Chat imgavatar={ImgAvatar} username="Carina" open={() => setProfile(true)} openIcon={<OpenIcon onClick={toggle}/>}/>
+            <Chat imgavatar={ImgAvatar} username="Carina" open={() => setProfile(true)} openIcon={<OpenIcon onClick={toggle}/>}
+            ChangePage={changePage} onChange={handleChangePage}/>
 
             <Modal trigger={profile} setTrigger={() => setProfile(false)}>
                 <ModalContent>
@@ -115,7 +129,7 @@ const ChatUser = () => {
                 </ModalContent>
             </Modal>
 
-            <RatingModal imgavatar={ImgAvatar} icon="star">
+            <RatingModal imgavatar={ImgAvatar} icon="star" trigger={rate} setTrigger={() => setRate(false)} >
                 <RatingWrapper>
                     <RateGroup>
                         <RateCheck id="amigavel" name="amigavel" value="amigavel" type="checkbox"/>

@@ -74,7 +74,7 @@ export const ChatContent = styled.div`
         }
 `
 
-export const ChatFooter = styled.div`
+export const ChatFooter = styled.form`
     position: sticky;
     background-color: ${Color.blue};
     display: flex;

@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useState, useEffect } from "react";
 import NavBar from "../../components/NavBar";
 import Mind from "../../assets/img/Mind.svg";
 import { ImgLogo } from "../../components/NavBar/NavBarElements";
@@ -6,6 +6,7 @@ import FormRegister from "../../components/FormRegister";
 import axios from "axios";
 
 const RegisterUser = () => {
+
   const [dados, setDados] = useState({
     nome: "",
     rm:null,
@@ -24,11 +25,18 @@ const RegisterUser = () => {
   const handleChange = (e) => {
     setDados({ ...dados, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    let data = new Date(dados.dataNascimento);
+
+    let dataFormatada = data.toLocaleDateString("pt-BR", {timeZone:"UTC"})
+
+    dados.dataNascimento = dataFormatada;
+
     axios
       .post("/cadastro", dados)
-
       .then(() => {
         window.location="/"
       })
@@ -37,6 +45,9 @@ const RegisterUser = () => {
         console.log(dados)
       });
   };
+  
+
+ 
 
   return (
     <>
