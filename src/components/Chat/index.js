@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
+import axios from "axios"
 import {FaFlag} from 'react-icons/fa'
 import {ChatData} from './ChatData'
 import {ChatContainer,
@@ -18,16 +19,44 @@ import {ChatContainer,
         SubmitIcon} from './ChatElements'
 import {Modal} from '../Modal';
 import {ModalH2,
-        ModalButton,
         ModalContent,
         ModalForm,
         FormWrapper,
-        ModalTextArea,} from '../Modal/ModalElements';
+        ModalTextArea,
+        ModalRealButton,} from '../Modal/ModalElements';
 
 
 const Chat = (props) => {
     const [report, setReport] = useState(false);
+
+    useEffect(()=>{
+        axios.get("/denuncia").then((res)=>{
+            console.log(res.data)
+        })
+    },[])
+
+    const [acusacao, setAcusacao] = useState({
+        acusacao:""
+    })
+
+    const handleChange = (e) => {
+        setAcusacao({ ...acusacao, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios
+          .post("/denuncia", acusacao)
     
+          .then((res) => {
+            console.log(res.data)
+          })
+          .catch((e) => {
+            console.log(e);
+            console.log(acusacao)
+          });
+      };
+
     return (
         <>
             <ChatContainer>
@@ -53,8 +82,8 @@ const Chat = (props) => {
                         )})}
                 </ChatContent>
 
-                <ChatFooter>
-                    <ChatInput placeholder="Digite sua mensagem"/>
+                <ChatFooter onSubmit={props.ChangePage}>
+                    <ChatInput placeholder="Digite sua mensagem" type="text" onChange={props.onChange}/>
                     <ChatSubmit>
                         <SubmitIcon />
                     </ChatSubmit>
@@ -64,18 +93,20 @@ const Chat = (props) => {
             <Modal trigger={report} setTrigger={() => setReport(false)}>
                 <ModalContent>
                     <ModalH2>Nos diga abaixo a sua denúncia</ModalH2>
-                    <ModalForm method="GET" action="">
+                    <ModalForm onSubmit={handleSubmit}>
                         <FormWrapper>
                             <ModalTextArea
-                                name="report"
+                                name="acusacao"
                                 id="report"
                                 rows="15"
+                                value={acusacao.acusacao}
+                                onChange={handleChange}
                             />
-                            <ModalButton>
+                            <ModalRealButton type="submit">
                                 {" "}
                                     Reportar!
                                 {" "}
-                            </ModalButton>
+                            </ModalRealButton>
                         </FormWrapper>
                     </ModalForm>
                 </ModalContent>

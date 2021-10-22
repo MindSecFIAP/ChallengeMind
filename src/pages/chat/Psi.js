@@ -19,20 +19,58 @@ import {SideBarWrapper,
         ReviewUser,} from '../../components/SideBar/SideBarElements'
 import ImgAvatar from "../../assets/avatar/avatar-29.svg";
 import {SideBarButton} from '../../components/SideBar/SideBarElements'
-import {CloseButton, Icon, RateTextArea, RateLabel} from '../../components/Modal/ModalElements'
+import {CloseButton, Icon, RateTextArea} from '../../components/Modal/ModalElements'
 import RatingModal from '../../components/Rating/RatingModal'
 import {OpenIcon} from '../../components/Chat/ChatElements'
+import axios from 'axios';
 const Container = styled.div`
     display: flex;
     flex-direction: row;
     overflow: hidden;
 `
+
+
 const ChatPsi = () => {
 
     const [isOpen, setIsOpen] = useState(true);
 
+    const [attention, setAttention] = useState({
+        elogio:""
+    })
+
+    const handleChange = (e) => {
+        setAttention({ ...attention, [e.target.name]: e.target.value });
+        console.log(attention)
+      };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios
+          .post("/elogio", attention)
+    
+          .then((res) => {
+            console.log(res.data)
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      };
+
     const toggle = () => {
         setIsOpen(!isOpen);
+    }
+
+    const [rate, setRate] = useState(false)
+    const [final, setFinal] = useState("")
+
+    const handleChangePage = (e) => {
+        setFinal({value: e.target.value});
+    };
+
+    const changePage = (e) =>{
+        e.preventDefault()
+        final.value.toLowerCase() == "avaliar" ? setRate(true) : console.log("Digitou errado");
+        
     }
 
         return (
@@ -67,14 +105,18 @@ const ChatPsi = () => {
                             )})}
                     </SideBarWrapper>
                 </SideBar>
-                <Chat imgavatar={ImgAvatar} username="José" openIcon={<OpenIcon onClick={toggle}/>} />
-                <RatingModal imgavatar={ImgAvatar} icon="alert">
+                <Chat imgavatar={ImgAvatar} username="José" openIcon={<OpenIcon onClick={toggle}/>} 
+                ChangePage={changePage} onChange={handleChangePage}/>
+                <RatingModal trigger={rate} setTrigger={() => setRate(false)} 
+                imgavatar={ImgAvatar} icon="alert" submit={handleSubmit}>
                     <RateTextArea 
-                        name="textRate"  
+                        name="elogio"  
                         id="rateUser" 
                         rows="15"
                         maxlength="50"
                         placeholder="Digite aqui um resumo do que foi conversado"
+                        value={attention.elogio}
+                        onChange={handleChange}
                     />
                 </RatingModal>
             </Container>

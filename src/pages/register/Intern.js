@@ -36,6 +36,13 @@ const RegisterIntern = () => {
 
       const handleSubmit = (e) => {
         e.preventDefault();
+
+        let data = new Date(dados.dataNascimento);
+
+        let dataFormatada = data.toLocaleDateString("pt-BR", {timeZone:"UTC"})
+    
+        dados.dataNascimento = dataFormatada;
+
         axios
           .post("/cadastro", dados)
     
@@ -44,7 +51,6 @@ const RegisterIntern = () => {
           })
           .catch((e) => {
             console.log(e);
-            console.log(dados)
           });
       };
 

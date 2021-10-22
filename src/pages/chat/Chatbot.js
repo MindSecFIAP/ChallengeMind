@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components";
 import Chat from '../../components/Chat'
 import SideBar from '../../components/SideBar'
@@ -19,7 +19,20 @@ const Container = styled.div`
     flex-direction: row;
     overflow: hidden;
 `
-const ChatUser = () => {
+const ChatBot = () => {
+
+    const [page, setPage] = useState()
+
+    const handleChangePage = (e) => {
+        setPage({value: e.target.value});
+    };
+
+    const changePage = (e) =>{
+        e.preventDefault()
+        page.value.toLowerCase() == "ajuda" ? window.location = "/chatUser" : console.log("Digitou errado");
+        
+    }
+
     return (
         <>
             <Container>
@@ -50,10 +63,13 @@ const ChatUser = () => {
                     </SideBarWrapper>
                 </SideBar>
 
-                <Chat imgavatar={ImgAvatar} username="MindBot (Digite 'Ajuda' caso necessite de um profissional)"/>
+                <Chat imgavatar={ImgAvatar} username="MindBot (Digite 'Ajuda' caso necessite de um profissional)"
+                ChangePage={changePage} onChange={handleChangePage}
+                
+                />
             </Container>
         </>
     )
 }
 
-export default ChatUser
+export default ChatBot

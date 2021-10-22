@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Modal} from '../../components/Modal';
 import {ModalH2,
         ModalContent,
         RatingForm,
-        RatingWrapper,
         InfoSection,
         ModalAvatar,
         RatingButton
@@ -11,16 +10,16 @@ import {ModalH2,
 import IconRating from './IconRating';
 
 const RatingModal = (props) => {
-    const [rating, setRating] = useState(false);
+    
     return (
         <>
-            <Modal trigger={rating} setTrigger={() => setRating(false)}>
+            <Modal trigger={props.trigger} setTrigger={props.setTrigger}>
                 <ModalContent>
                     <ModalH2>Avaliação</ModalH2>
                     <InfoSection>
                         <ModalAvatar src={props.imgavatar} />
                     </InfoSection>
-                    <RatingForm method="get">
+                    <RatingForm method="get" onSubmit={props.submit}>
                         <IconRating icon={props.icon}/>
                             {props.children}
                         <RatingButton type="submit">Enviar</RatingButton>
